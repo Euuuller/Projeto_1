@@ -1,0 +1,121 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "fa1a7cf16c16d3200cca",
+  "position": {
+    "x": 102.12765957446808,
+    "y": 107.96352583586626,
+    "z": 0,
+    "height": 409.48328267477206,
+    "width": 861.76291793313078
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dEstruturaDRE"
+                    }
+                  },
+                  "Property": "contaGerencial"
+                }
+              },
+              "queryRef": "dEstruturaDRE.contaGerencial",
+              "nativeQueryRef": "contaGerencial"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dPlanoConta"
+                    }
+                  },
+                  "Property": "descricaoN1"
+                }
+              },
+              "queryRef": "dPlanoConta.descricaoN1",
+              "nativeQueryRef": "descricaoN1"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fLancamentos"
+                        }
+                      },
+                      "Property": "valor"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(fLancamentos.valor)",
+              "nativeQueryRef": "Soma de valor"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "a04db1c390ba6b3d825c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dEstruturaDRE"
+              }
+            },
+            "Property": "contaGerencial"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "b8c26be8d300f9a172c0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dPlanoConta"
+              }
+            },
+            "Property": "descricaoN1"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "4b2b7d1faf4f9b296616",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fLancamentos"
+                  }
+                },
+                "Property": "valor"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

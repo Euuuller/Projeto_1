@@ -1,0 +1,100 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 568,
+            "y": 0
+          },
+          "nodeIndex": "dEstruturaDRE",
+          "nodeLineageTag": "94440113-fcd1-4f6e-a0c3-5a10bc365c56",
+          "size": {
+            "height": 302,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 244,
+            "y": 0
+          },
+          "nodeIndex": "dPlanoConta",
+          "nodeLineageTag": "d9785f67-d097-4726-8c3b-429a978256bb",
+          "size": {
+            "height": 301,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 352
+          },
+          "nodeIndex": "fLancamentos",
+          "nodeLineageTag": "36002a6d-0511-4e72-9190-1ee36c5751e9",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 240,
+            "y": 353
+          },
+          "nodeIndex": "fOrcamento",
+          "nodeLineageTag": "42974088-acf0-49af-bc60-00891ba9bab3",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 484,
+            "y": 353
+          },
+          "nodeIndex": "fPrevisao",
+          "nodeLineageTag": "60c56509-378a-4d66-99d0-0afafdd9c693",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "dCalendario",
+          "nodeLineageTag": "fcb3896f-4709-4bb1-820a-f0e72acc33f4",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas as tabelas",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas as tabelas",
+  "defaultDiagram": "Todas as tabelas"
+}

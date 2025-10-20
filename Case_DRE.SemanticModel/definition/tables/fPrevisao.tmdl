@@ -8,11 +8,6 @@ table fPrevisao
 		summarizeBy: none
 		sourceColumn: competencia_data
 
-		variation Variation
-			isDefault
-			relationship: 437f321a-1e5f-44ec-8a5e-3b595c246778
-			defaultHierarchy: LocalDateTable_3fce9e2d-1f35-4139-b54a-f82cefaa6245.'Hierarquia de datas'
-
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date

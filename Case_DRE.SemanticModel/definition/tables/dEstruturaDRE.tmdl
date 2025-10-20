@@ -13,7 +13,7 @@ table dEstruturaDRE
 		dataType: int64
 		formatString: 0
 		lineageTag: ddb1db43-cea0-4fe4-879b-f345b48afb57
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: index
 
 		annotation SummarizationSetBy = Automatic
@@ -30,7 +30,7 @@ table dEstruturaDRE
 		dataType: int64
 		formatString: 0
 		lineageTag: a7fc096b-15c8-4fb9-9704-69f22ca85be9
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: subtotal
 
 		annotation SummarizationSetBy = Automatic

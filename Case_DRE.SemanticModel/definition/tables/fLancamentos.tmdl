@@ -8,11 +8,6 @@ table fLancamentos
 		summarizeBy: none
 		sourceColumn: competencia_data
 
-		variation Variation
-			isDefault
-			relationship: 3a1aefc6-4243-425a-9f0a-b43dd90288d2
-			defaultHierarchy: LocalDateTable_eef4e88e-0510-4856-ac70-83c707bccd2a.'Hierarquia de datas'
-
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date

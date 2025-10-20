@@ -1,4 +1,4 @@
-table Consulta1
+table dCalendario
 	lineageTag: fcb3896f-4709-4bb1-820a-f0e72acc33f4
 
 	column Data
@@ -170,7 +170,7 @@ table Consulta1
 
 		annotation SummarizationSetBy = Automatic
 
-	partition Consulta1 = m
+	partition dCalendario = m
 		mode: import
 		queryGroup: Dimensões
 		source = ```
@@ -241,6 +241,8 @@ table Consulta1
 				in
 				    #"Colunas Renomeadas"
 				```
+
+	changedProperty = Name
 
 	annotation PBI_NavigationStepName = Navegação
 

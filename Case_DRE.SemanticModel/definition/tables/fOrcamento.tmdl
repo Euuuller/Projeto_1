@@ -8,11 +8,6 @@ table fOrcamento
 		summarizeBy: none
 		sourceColumn: competencia_data
 
-		variation Variation
-			isDefault
-			relationship: c79a8f49-6bfe-4a80-b837-2673150ac234
-			defaultHierarchy: LocalDateTable_8ae34fa9-9b9f-45bd-927a-5b57f880ff0c.'Hierarquia de datas'
-
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
