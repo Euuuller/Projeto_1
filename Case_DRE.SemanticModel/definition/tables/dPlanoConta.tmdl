@@ -1,0 +1,79 @@
+table dPlanoConta
+	lineageTag: d9785f67-d097-4726-8c3b-429a978256bb
+
+	column id
+		dataType: string
+		lineageTag: a2df5a24-e40a-44fd-8e9a-d35450c49d9c
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column index
+		dataType: int64
+		formatString: 0
+		lineageTag: 07bdc681-231d-4396-a1b4-3d7f60a99f1c
+		summarizeBy: sum
+		sourceColumn: index
+
+		annotation SummarizationSetBy = Automatic
+
+	column descricaoN1
+		dataType: string
+		lineageTag: 81d12a5f-67db-42b4-a4b0-2c606b06abac
+		summarizeBy: none
+		sourceColumn: descricaoN1
+
+		annotation SummarizationSetBy = Automatic
+
+	column descricaoN2
+		dataType: string
+		lineageTag: be39854f-f786-47b4-88e9-827a8414ab5a
+		summarizeBy: none
+		sourceColumn: descricaoN2
+
+		annotation SummarizationSetBy = Automatic
+
+	column detalharN2
+		dataType: int64
+		formatString: 0
+		lineageTag: 16d1565b-a49f-44cf-852d-bf48843b36c6
+		summarizeBy: sum
+		sourceColumn: detalharN2
+
+		annotation SummarizationSetBy = Automatic
+
+	column mascaraDRE_id
+		dataType: string
+		lineageTag: d6a2ec0b-fc37-4bb7-9447-e653e9a216db
+		summarizeBy: none
+		sourceColumn: mascaraDRE_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipoLancamento
+		dataType: int64
+		formatString: 0
+		lineageTag: c175f0aa-9319-49b3-a7fd-7fbbc72f9bd7
+		summarizeBy: sum
+		sourceColumn: tipoLancamento
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dPlanoConta = m
+		mode: import
+		queryGroup: Dimensões
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\Euller dos Santos\Documents\2. Cursos\3. Xperium\Projetos\1_Projeto\08. Dashboard de Controladoria com DRE\Desafio\BaseDados.xlsx"), null, true),
+				    dPlanoConta_Sheet = Fonte{[Item="dPlanoConta",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(dPlanoConta_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"id", type text}, {"index", Int64.Type}, {"descricaoN1", type text}, {"descricaoN2", type text}, {"detalharN2", Int64.Type}, {"mascaraDRE_id", type text}, {"tipoLancamento", Int64.Type}}),
+				    #"Linhas Filtradas" = Table.SelectRows(#"Tipo Alterado", each [id] <> null and [id] <> "")
+				in
+				    #"Linhas Filtradas"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

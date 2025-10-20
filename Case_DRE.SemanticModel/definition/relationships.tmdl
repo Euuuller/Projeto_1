@@ -1,0 +1,25 @@
+relationship c79a8f49-6bfe-4a80-b837-2673150ac234
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fOrcamento.competencia_data
+	toColumn: LocalDateTable_8ae34fa9-9b9f-45bd-927a-5b57f880ff0c.Date
+
+relationship 437f321a-1e5f-44ec-8a5e-3b595c246778
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fPrevisao.competencia_data
+	toColumn: LocalDateTable_3fce9e2d-1f35-4139-b54a-f82cefaa6245.Date
+
+relationship 3a1aefc6-4243-425a-9f0a-b43dd90288d2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: fLancamentos.competencia_data
+	toColumn: LocalDateTable_eef4e88e-0510-4856-ac70-83c707bccd2a.Date
+
+relationship c11ac381-c559-44f5-aa91-4b0bac4f1dbc
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Consulta1.Data
+	toColumn: LocalDateTable_af5929d3-98c9-4f43-961e-bc00f58756d2.Date
+
+relationship d5b470c4-1045-4751-898d-8959885ab29e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Consulta1.InicioMes
+	toColumn: LocalDateTable_792c3684-01e6-488d-a888-176f90b1bc61.Date
+

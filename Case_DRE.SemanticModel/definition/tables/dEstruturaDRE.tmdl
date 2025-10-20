@@ -1,0 +1,63 @@
+table dEstruturaDRE
+	lineageTag: 94440113-fcd1-4f6e-a0c3-5a10bc365c56
+
+	column id
+		dataType: string
+		lineageTag: 4a4d9daf-0551-432f-92d6-31aedcef6308
+		summarizeBy: none
+		sourceColumn: id
+
+		annotation SummarizationSetBy = Automatic
+
+	column index
+		dataType: int64
+		formatString: 0
+		lineageTag: ddb1db43-cea0-4fe4-879b-f345b48afb57
+		summarizeBy: sum
+		sourceColumn: index
+
+		annotation SummarizationSetBy = Automatic
+
+	column contaGerencial
+		dataType: string
+		lineageTag: 6446a6b1-5524-48f2-a2a2-cc3a27ee44e3
+		summarizeBy: none
+		sourceColumn: contaGerencial
+
+		annotation SummarizationSetBy = Automatic
+
+	column subtotal
+		dataType: int64
+		formatString: 0
+		lineageTag: a7fc096b-15c8-4fb9-9704-69f22ca85be9
+		summarizeBy: sum
+		sourceColumn: subtotal
+
+		annotation SummarizationSetBy = Automatic
+
+	column empresa
+		dataType: string
+		lineageTag: e6838a17-1284-419c-bfd6-5aeb05d7c8eb
+		summarizeBy: none
+		sourceColumn: empresa
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dEstruturaDRE = m
+		mode: import
+		queryGroup: Dimensões
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\Euller dos Santos\Documents\2. Cursos\3. Xperium\Projetos\1_Projeto\08. Dashboard de Controladoria com DRE\Desafio\BaseDados.xlsx"), null, true),
+				    dEstruturaDRE_Sheet = Fonte{[Item="dEstruturaDRE",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(dEstruturaDRE_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"id", type text}, {"index", Int64.Type}, {"contaGerencial", type text}, {"subtotal", Int64.Type}, {"empresa", type text}, {"Column6", type any}, {"Column7", type any}, {"Column8", type any}, {"Column9", type any}, {"Column10", type any}, {"Column11", type any}, {"Column12", type any}, {"Column13", type any}, {"Column14", type any}, {"Column15", type any}, {"Column16", type any}, {"Column17", type any}, {"Column18", type any}, {"Column19", type any}, {"Column20", type any}, {"Column21", type any}, {"Column22", type any}, {"Column23", type any}, {"Column24", type any}, {"Column25", type any}, {"Column26", type any}}),
+				    #"Linhas Filtradas" = Table.SelectRows(#"Tipo Alterado", each [id] <> null and [id] <> ""),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Linhas Filtradas",{"Column6", "Column7", "Column8", "Column9", "Column10", "Column11", "Column12", "Column13", "Column14", "Column15", "Column16", "Column17", "Column18", "Column19", "Column20", "Column21", "Column22", "Column23", "Column24", "Column25", "Column26"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

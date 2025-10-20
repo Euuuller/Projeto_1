@@ -1,0 +1,54 @@
+table fOrcamento
+	lineageTag: 42974088-acf0-49af-bc60-00891ba9bab3
+
+	column competencia_data
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 850c5880-d1f3-4bc7-b191-bf2f2bbe0e4a
+		summarizeBy: none
+		sourceColumn: competencia_data
+
+		variation Variation
+			isDefault
+			relationship: c79a8f49-6bfe-4a80-b837-2673150ac234
+			defaultHierarchy: LocalDateTable_8ae34fa9-9b9f-45bd-927a-5b57f880ff0c.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column planoContas_id
+		dataType: string
+		lineageTag: ada9913a-1626-4925-ade6-4aa3b3e98bb0
+		summarizeBy: none
+		sourceColumn: planoContas_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column valor
+		dataType: decimal
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		lineageTag: 430a755b-bbf0-458c-9026-3ce12ffee129
+		summarizeBy: sum
+		sourceColumn: valor
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	partition fOrcamento = m
+		mode: import
+		queryGroup: Fatos
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\Euller dos Santos\Documents\2. Cursos\3. Xperium\Projetos\1_Projeto\08. Dashboard de Controladoria com DRE\Desafio\BaseDados.xlsx"), null, true),
+				    fOrcamento_Sheet = Fonte{[Item="fOrcamento",Kind="Sheet"]}[Data],
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(fOrcamento_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"competencia_data", type date}, {"planoContas_id", type text}, {"valor", Currency.Type}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

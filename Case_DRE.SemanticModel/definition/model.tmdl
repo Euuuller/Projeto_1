@@ -6,9 +6,32 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
+queryGroup Dimensões
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup Fatos
+
+	annotation PBI_QueryGroupOrder = 1
+
 annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_ProTooling = ["DevMode"]
+
+annotation PBI_QueryOrder = ["dEstruturaDRE","dPlanoConta","fOrcamento","fPrevisao","fLancamentos","Consulta1"]
+
+ref table dEstruturaDRE
+ref table dPlanoConta
+ref table fOrcamento
+ref table DateTableTemplate_745abdd4-9d00-4791-9e19-c728134645e3
+ref table LocalDateTable_8ae34fa9-9b9f-45bd-927a-5b57f880ff0c
+ref table fPrevisao
+ref table LocalDateTable_3fce9e2d-1f35-4139-b54a-f82cefaa6245
+ref table fLancamentos
+ref table LocalDateTable_eef4e88e-0510-4856-ac70-83c707bccd2a
+ref table Consulta1
+ref table LocalDateTable_af5929d3-98c9-4f43-961e-bc00f58756d2
+ref table LocalDateTable_792c3684-01e6-488d-a888-176f90b1bc61
 
 ref cultureInfo pt-BR
 

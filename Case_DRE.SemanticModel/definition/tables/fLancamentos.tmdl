@@ -1,0 +1,55 @@
+table fLancamentos
+	lineageTag: 36002a6d-0511-4e72-9190-1ee36c5751e9
+
+	column competencia_data
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f7cf722e-d41c-4739-a3c5-7e7e8f828fc5
+		summarizeBy: none
+		sourceColumn: competencia_data
+
+		variation Variation
+			isDefault
+			relationship: 3a1aefc6-4243-425a-9f0a-b43dd90288d2
+			defaultHierarchy: LocalDateTable_eef4e88e-0510-4856-ac70-83c707bccd2a.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column planoContas_id
+		dataType: string
+		lineageTag: e6d5062b-9b86-4b8d-a657-38d1520d56aa
+		summarizeBy: none
+		sourceColumn: planoContas_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column valor
+		dataType: decimal
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		lineageTag: 376ad224-0c13-4a99-ac66-bacb07023905
+		summarizeBy: sum
+		sourceColumn: valor
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	partition fLancamentos = m
+		mode: import
+		queryGroup: Fatos
+		source =
+				let
+				    Fonte = Excel.Workbook(File.Contents("C:\Users\Euller dos Santos\Documents\2. Cursos\3. Xperium\Projetos\1_Projeto\08. Dashboard de Controladoria com DRE\Desafio\BaseDados.xlsx"), true, true),
+				    #"Linhas Filtradas" = Table.SelectRows(Fonte, each Text.StartsWith([Name], "fLan")),
+				    #"Outras Colunas Removidas" = Table.SelectColumns(#"Linhas Filtradas",{"Data"}),
+				    #"Data Expandido" = Table.ExpandTableColumn(#"Outras Colunas Removidas", "Data", {"competencia_data", "planoContas_id", "valor"}, {"competencia_data", "planoContas_id", "valor"}),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Data Expandido",{{"competencia_data", type date}, {"planoContas_id", type text}, {"valor", Currency.Type}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+
