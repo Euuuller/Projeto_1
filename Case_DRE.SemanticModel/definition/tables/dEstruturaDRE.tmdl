@@ -23,6 +23,9 @@ table dEstruturaDRE
 		lineageTag: 6446a6b1-5524-48f2-a2a2-cc3a27ee44e3
 		summarizeBy: none
 		sourceColumn: contaGerencial
+		sortByColumn: index
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "fa1a7cf16c16d3200cca",
   "position": {
-    "x": 102.12765957446808,
-    "y": 107.96352583586626,
+    "x": 0,
+    "y": 194.52887537993922,
     "z": 0,
-    "height": 409.48328267477206,
-    "width": 861.76291793313078
+    "height": 525.22796352583589,
+    "width": 757.68996960486322
   },
   "visual": {
     "visualType": "tableEx",
@@ -30,20 +30,6 @@
             },
             {
               "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "dPlanoConta"
-                    }
-                  },
-                  "Property": "descricaoN1"
-                }
-              },
-              "queryRef": "dPlanoConta.descricaoN1",
-              "nativeQueryRef": "descricaoN1"
-            },
-            {
-              "field": {
                 "Aggregation": {
                   "Expression": {
                     "Column": {
@@ -60,10 +46,81 @@
               },
               "queryRef": "Sum(fLancamentos.valor)",
               "nativeQueryRef": "Soma de valor"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fOrcamento"
+                        }
+                      },
+                      "Property": "valor"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(fOrcamento.valor)",
+              "nativeQueryRef": "Soma de valor1"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "fPrevisao"
+                        }
+                      },
+                      "Property": "valor"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(fPrevisao.valor)",
+              "nativeQueryRef": "Soma de valor2"
             }
-          ]
+          ],
+          "showAll": true
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "dEstruturaDRE"
+                  }
+                },
+                "Property": "contaGerencial"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
       }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   },
@@ -84,20 +141,6 @@
         "type": "Categorical"
       },
       {
-        "name": "b8c26be8d300f9a172c0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dPlanoConta"
-              }
-            },
-            "Property": "descricaoN1"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
         "name": "4b2b7d1faf4f9b296616",
         "field": {
           "Aggregation": {
@@ -106,6 +149,44 @@
                 "Expression": {
                   "SourceRef": {
                     "Entity": "fLancamentos"
+                  }
+                },
+                "Property": "valor"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8548b19cacaa772c9124",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fOrcamento"
+                  }
+                },
+                "Property": "valor"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "b9831429d556e5feddd6",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fPrevisao"
                   }
                 },
                 "Property": "valor"
