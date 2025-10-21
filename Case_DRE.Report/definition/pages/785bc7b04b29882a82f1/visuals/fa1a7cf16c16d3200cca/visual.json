@@ -2,17 +2,36 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "fa1a7cf16c16d3200cca",
   "position": {
-    "x": 85.401111993645742,
-    "y": 176.90230341540905,
+    "x": 283.65369340746622,
+    "y": 218.58617950754567,
     "z": 0,
-    "height": 525.6235107227958,
-    "width": 1109.1977760127083
+    "height": 360.92136616362188,
+    "width": 886.5448768864178
   },
   "visual": {
-    "visualType": "tableEx",
+    "visualType": "pivotTable",
     "query": {
       "queryState": {
-        "Values": {
+        "Columns": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dEstruturaDRE"
+                    }
+                  },
+                  "Property": "empresa"
+                }
+              },
+              "queryRef": "dEstruturaDRE.empresa",
+              "nativeQueryRef": "empresa",
+              "active": true
+            }
+          ]
+        },
+        "Rows": {
           "projections": [
             {
               "field": {
@@ -26,22 +45,14 @@
                 }
               },
               "queryRef": "dEstruturaDRE.contaGerencial",
-              "nativeQueryRef": "contaGerencial"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Medidas"
-                    }
-                  },
-                  "Property": "$ total Lançamentos"
-                }
-              },
-              "queryRef": "Medidas.$ total Lançamentos",
-              "nativeQueryRef": "$ total Lançamentos"
-            },
+              "nativeQueryRef": "contaGerencial",
+              "active": true
+            }
+          ],
+          "showAll": true
+        },
+        "Values": {
+          "projections": [
             {
               "field": {
                 "Measure": {
@@ -56,24 +67,23 @@
               "queryRef": "Medidas.$ Realizado",
               "nativeQueryRef": "$ Realizado"
             }
-          ],
-          "showAll": true
+          ]
         }
       },
       "sortDefinition": {
         "sort": [
           {
             "field": {
-              "Column": {
+              "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "dEstruturaDRE"
+                    "Entity": "Medidas"
                   }
                 },
-                "Property": "contaGerencial"
+                "Property": "$ Realizado"
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ]
       }
@@ -98,7 +108,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "a04db1c390ba6b3d825c",
+        "name": "c3303a785fc53fe5fc83",
         "field": {
           "Column": {
             "Expression": {
@@ -112,21 +122,7 @@
         "type": "Categorical"
       },
       {
-        "name": "1b23d62754ff53f8e6b0",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "$ total Lançamentos"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "99d6631adc49b3aaeb59",
+        "name": "1e541c95a6933e0f2087",
         "field": {
           "Measure": {
             "Expression": {
@@ -138,6 +134,20 @@
           }
         },
         "type": "Advanced"
+      },
+      {
+        "name": "85791c6c75cfed3ec180",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dEstruturaDRE"
+              }
+            },
+            "Property": "empresa"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

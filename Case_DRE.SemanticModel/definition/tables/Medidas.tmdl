@@ -20,7 +20,8 @@ table Medidas
 			VAR vAcumulado =
 			CALCULATE(
 			    [$ total Lançamentos],
-			    ALL(dEstruturaDRE),
+			    ALLSELECTED(dEstruturaDRE),
+			    VALUES(dEstruturaDRE[empresa]), //Devolva o contexto de empresa
 			    dEstruturaDRE[index] < vIndex
 			)
 			RETURN

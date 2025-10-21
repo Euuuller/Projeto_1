@@ -1,0 +1,77 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "a31d69aea5168ba47500",
+  "position": {
+    "x": 355.83796664019059,
+    "y": 0,
+    "z": 3,
+    "height": 84.384432088959485,
+    "width": 176.90230341540905,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dEstruturaDRE"
+                    }
+                  },
+                  "Property": "empresa"
+                }
+              },
+              "queryRef": "dEstruturaDRE.empresa",
+              "nativeQueryRef": "empresa",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Basic'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "9c747f1c9e6a54f4ab98",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dEstruturaDRE"
+              }
+            },
+            "Property": "empresa"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}
