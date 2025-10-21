@@ -7,16 +7,43 @@ table Medidas
 			    fLancamentos,
 			    fLancamentos[valor] * RELATED(dPlanoConta[tipoLancamento])
 			)
-		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
 		lineageTag: 0421cd52-03d2-4f61-8ccd-b455526ec22b
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure Subtotal = SELECTEDVALUE(dEstruturaDRE[subtotal])
+		formatString: 0
+		lineageTag: e010ee81-7a63-495b-b9a5-2786e4bbb97c
+
+	measure 'Contas Visíveis' = MIN(dEstruturaDRE[index]) & " - " & MAX(dEstruturaDRE[index])
+		lineageTag: 84802010-f21a-4137-9e6f-861cc7fc8ae2
+
+	measure '$ Realizado' =
+			
+			VAR vSubtotal = SELECTEDVALUE(dEstruturaDRE[subtotal])
+			VAR vIndex = SELECTEDVALUE(dEstruturaDRE[index])
+			VAR vAcumulado =
+			CALCULATE(
+			    [$ total Lançamentos],
+			    ALL(dEstruturaDRE),
+			    dEstruturaDRE[index] < vIndex
+			)
+			RETURN
+			vAcumulado
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		lineageTag: fbeb9bbc-008e-4b91-b1ee-fab8f4537e6d
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
 	column 'Coluna 1'
 		dataType: string
+		isHidden
 		lineageTag: 32890ab4-5970-4c00-a14e-7ea50940e49e
 		summarizeBy: none
 		sourceColumn: Coluna 1
+
+		changedProperty = IsHidden
 
 		annotation SummarizationSetBy = Automatic
 

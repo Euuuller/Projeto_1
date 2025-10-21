@@ -30,25 +30,6 @@
             },
             {
               "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fLancamentos"
-                        }
-                      },
-                      "Property": "valor"
-                    }
-                  },
-                  "Function": 0
-                }
-              },
-              "queryRef": "Sum(fLancamentos.valor)",
-              "nativeQueryRef": "Soma de valor"
-            },
-            {
-              "field": {
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
@@ -60,6 +41,48 @@
               },
               "queryRef": "Medidas.$ total Lançamentos",
               "nativeQueryRef": "$ total Lançamentos"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Subtotal"
+                }
+              },
+              "queryRef": "Medidas.Subtotal",
+              "nativeQueryRef": "Subtotal"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Contas Visíveis"
+                }
+              },
+              "queryRef": "Medidas.Contas Visíveis",
+              "nativeQueryRef": "Contas Visíveis"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "$ Realizado"
+                }
+              },
+              "queryRef": "Medidas.$ Realizado",
+              "nativeQueryRef": "$ Realizado"
             }
           ],
           "showAll": true
@@ -69,18 +92,13 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Column": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "fLancamentos"
-                      }
-                    },
-                    "Property": "valor"
+                  "SourceRef": {
+                    "Entity": "dEstruturaDRE"
                   }
                 },
-                "Function": 0
+                "Property": "contaGerencial"
               }
             },
             "direction": "Ascending"
@@ -122,25 +140,6 @@
         "type": "Categorical"
       },
       {
-        "name": "4b2b7d1faf4f9b296616",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "fLancamentos"
-                  }
-                },
-                "Property": "valor"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
         "name": "1b23d62754ff53f8e6b0",
         "field": {
           "Measure": {
@@ -150,6 +149,48 @@
               }
             },
             "Property": "$ total Lançamentos"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f5b7e24dfcd42dee92c2",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Subtotal"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f5d3c690492a6c832c33",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Contas Visíveis"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "99d6631adc49b3aaeb59",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "$ Realizado"
           }
         },
         "type": "Advanced"
