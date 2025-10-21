@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "fa1a7cf16c16d3200cca",
   "position": {
-    "x": 0,
-    "y": 194.18586179507545,
+    "x": 85.401111993645742,
+    "y": 176.90230341540905,
     "z": 0,
     "height": 525.6235107227958,
     "width": 1109.1977760127083
@@ -41,34 +41,6 @@
               },
               "queryRef": "Medidas.$ total Lançamentos",
               "nativeQueryRef": "$ total Lançamentos"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Medidas"
-                    }
-                  },
-                  "Property": "Subtotal"
-                }
-              },
-              "queryRef": "Medidas.Subtotal",
-              "nativeQueryRef": "Subtotal"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Medidas"
-                    }
-                  },
-                  "Property": "Contas Visíveis"
-                }
-              },
-              "queryRef": "Medidas.Contas Visíveis",
-              "nativeQueryRef": "Contas Visíveis"
             },
             {
               "field": {
@@ -149,34 +121,6 @@
               }
             },
             "Property": "$ total Lançamentos"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "f5b7e24dfcd42dee92c2",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Subtotal"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "f5d3c690492a6c832c33",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Contas Visíveis"
           }
         },
         "type": "Advanced"

@@ -12,17 +12,11 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
-	measure Subtotal = SELECTEDVALUE(dEstruturaDRE[subtotal])
-		formatString: 0
-		lineageTag: e010ee81-7a63-495b-b9a5-2786e4bbb97c
-
-	measure 'Contas Visíveis' = MIN(dEstruturaDRE[index]) & " - " & MAX(dEstruturaDRE[index])
-		lineageTag: 84802010-f21a-4137-9e6f-861cc7fc8ae2
-
 	measure '$ Realizado' =
 			
 			VAR vSubtotal = SELECTEDVALUE(dEstruturaDRE[subtotal])
 			VAR vIndex = SELECTEDVALUE(dEstruturaDRE[index])
+			VAR vTotal = [$ total Lançamentos]
 			VAR vAcumulado =
 			CALCULATE(
 			    [$ total Lançamentos],
@@ -30,8 +24,13 @@ table Medidas
 			    dEstruturaDRE[index] < vIndex
 			)
 			RETURN
-			vAcumulado
-		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+			SWITCH(
+			    TRUE(),
+			    vSubtotal = 0, vTotal,
+			    vSubtotal = 1, vAcumulado,
+			    BLANK()
+			)
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
 		lineageTag: fbeb9bbc-008e-4b91-b1ee-fab8f4537e6d
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
