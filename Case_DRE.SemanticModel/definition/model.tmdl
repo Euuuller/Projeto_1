@@ -18,7 +18,7 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_ProTooling = ["DevMode"]
 
-annotation PBI_QueryOrder = ["dEstruturaDRE","dPlanoConta","fOrcamento","fPrevisao","fLancamentos","dCalendario"]
+annotation PBI_QueryOrder = ["dEstruturaDRE","dPlanoConta","fOrcamento","fPrevisao","fLancamentos","dCalendario","Medidas"]
 
 ref table dEstruturaDRE
 ref table dPlanoConta
@@ -29,6 +29,7 @@ ref table fLancamentos
 ref table dCalendario
 ref table LocalDateTable_af5929d3-98c9-4f43-961e-bc00f58756d2
 ref table LocalDateTable_792c3684-01e6-488d-a888-176f90b1bc61
+ref table Medidas
 
 ref cultureInfo pt-BR
 

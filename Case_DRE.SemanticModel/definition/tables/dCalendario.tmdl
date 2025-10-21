@@ -245,8 +245,6 @@ table dCalendario
 				    #"Colunas Renomeadas"
 				```
 
-	changedProperty = Name
-
 	annotation PBI_NavigationStepName = Navegação
 
 	annotation PBI_ResultType = Table

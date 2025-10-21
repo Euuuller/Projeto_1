@@ -40,9 +40,11 @@ table fLancamentos
 				    #"Linhas Filtradas" = Table.SelectRows(Fonte, each Text.StartsWith([Name], "fLan")),
 				    #"Outras Colunas Removidas" = Table.SelectColumns(#"Linhas Filtradas",{"Data"}),
 				    #"Data Expandido" = Table.ExpandTableColumn(#"Outras Colunas Removidas", "Data", {"competencia_data", "planoContas_id", "valor"}, {"competencia_data", "planoContas_id", "valor"}),
-				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Data Expandido",{{"competencia_data", type date}, {"planoContas_id", type text}, {"valor", Currency.Type}})
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Data Expandido",{{"competencia_data", type date}, {"planoContas_id", type text}, {"valor", Currency.Type}}),
+				    #"Linhas Filtradas1" = Table.SelectRows(#"Tipo Alterado", each [competencia_data] <> null and [competencia_data] <> ""),
+				    #"Linhas Filtradas2" = Table.SelectRows(#"Linhas Filtradas1", each [planoContas_id] <> null and [planoContas_id] <> "")
 				in
-				    #"Tipo Alterado"
+				    #"Linhas Filtradas2"
 
 	annotation PBI_NavigationStepName = Navegação
 

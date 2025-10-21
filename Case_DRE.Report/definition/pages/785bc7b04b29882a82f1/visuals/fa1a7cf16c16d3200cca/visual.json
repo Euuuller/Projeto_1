@@ -3,10 +3,10 @@
   "name": "fa1a7cf16c16d3200cca",
   "position": {
     "x": 0,
-    "y": 194.52887537993922,
+    "y": 194.18586179507545,
     "z": 0,
-    "height": 525.22796352583589,
-    "width": 757.68996960486322
+    "height": 525.6235107227958,
+    "width": 1109.1977760127083
   },
   "visual": {
     "visualType": "tableEx",
@@ -49,41 +49,17 @@
             },
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fOrcamento"
-                        }
-                      },
-                      "Property": "valor"
+                    "SourceRef": {
+                      "Entity": "Medidas"
                     }
                   },
-                  "Function": 0
+                  "Property": "$ total Lançamentos"
                 }
               },
-              "queryRef": "Sum(fOrcamento.valor)",
-              "nativeQueryRef": "Soma de valor1"
-            },
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fPrevisao"
-                        }
-                      },
-                      "Property": "valor"
-                    }
-                  },
-                  "Function": 0
-                }
-              },
-              "queryRef": "Sum(fPrevisao.valor)",
-              "nativeQueryRef": "Soma de valor2"
+              "queryRef": "Medidas.$ total Lançamentos",
+              "nativeQueryRef": "$ total Lançamentos"
             }
           ],
           "showAll": true
@@ -93,13 +69,18 @@
         "sort": [
           {
             "field": {
-              "Column": {
+              "Aggregation": {
                 "Expression": {
-                  "SourceRef": {
-                    "Entity": "dEstruturaDRE"
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "fLancamentos"
+                      }
+                    },
+                    "Property": "valor"
                   }
                 },
-                "Property": "contaGerencial"
+                "Function": 0
               }
             },
             "direction": "Ascending"
@@ -160,39 +141,15 @@
         "type": "Advanced"
       },
       {
-        "name": "8548b19cacaa772c9124",
+        "name": "1b23d62754ff53f8e6b0",
         "field": {
-          "Aggregation": {
+          "Measure": {
             "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "fOrcamento"
-                  }
-                },
-                "Property": "valor"
+              "SourceRef": {
+                "Entity": "Medidas"
               }
             },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "b9831429d556e5feddd6",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "fPrevisao"
-                  }
-                },
-                "Property": "valor"
-              }
-            },
-            "Function": 0
+            "Property": "$ total Lançamentos"
           }
         },
         "type": "Advanced"

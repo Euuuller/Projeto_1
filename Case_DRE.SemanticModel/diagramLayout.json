@@ -10,7 +10,7 @@
       "nodes": [
         {
           "location": {
-            "x": 568,
+            "x": 770,
             "y": 0
           },
           "nodeIndex": "dEstruturaDRE",
@@ -23,7 +23,7 @@
         },
         {
           "location": {
-            "x": 244,
+            "x": 378,
             "y": 0
           },
           "nodeIndex": "dPlanoConta",
@@ -49,8 +49,8 @@
         },
         {
           "location": {
-            "x": 240,
-            "y": 353
+            "x": 267,
+            "y": 427
           },
           "nodeIndex": "fOrcamento",
           "nodeLineageTag": "42974088-acf0-49af-bc60-00891ba9bab3",
@@ -62,8 +62,8 @@
         },
         {
           "location": {
-            "x": 484,
-            "y": 353
+            "x": 632,
+            "y": 418
           },
           "nodeIndex": "fPrevisao",
           "nodeLineageTag": "60c56509-378a-4d66-99d0-0afafdd9c693",
