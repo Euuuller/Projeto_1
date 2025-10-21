@@ -16,6 +16,7 @@ table Medidas
 			
 			VAR vSubtotal = SELECTEDVALUE(dEstruturaDRE[subtotal])
 			VAR vIndex = SELECTEDVALUE(dEstruturaDRE[index])
+			VAR vDetalharN2 = SELECTEDVALUE(dPlanoConta[detalharN2])
 			VAR vTotal = [$ total Lançamentos]
 			VAR vAcumulado =
 			CALCULATE(
@@ -27,6 +28,8 @@ table Medidas
 			RETURN
 			SWITCH(
 			    TRUE(),
+			    vSubtotal = 1 && ISINSCOPE(dPlanoConta[descricaoN1]), BLANK(),
+			    vDetalharN2 = 0 && ISINSCOPE(dPlanoConta[descricaoN2]), BLANK(),
 			    vSubtotal = 0, vTotal,
 			    vSubtotal = 1, vAcumulado,
 			    BLANK()

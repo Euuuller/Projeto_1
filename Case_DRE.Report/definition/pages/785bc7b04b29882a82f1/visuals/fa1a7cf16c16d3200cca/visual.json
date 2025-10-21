@@ -12,25 +12,6 @@
     "visualType": "pivotTable",
     "query": {
       "queryState": {
-        "Columns": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "dEstruturaDRE"
-                    }
-                  },
-                  "Property": "empresa"
-                }
-              },
-              "queryRef": "dEstruturaDRE.empresa",
-              "nativeQueryRef": "empresa",
-              "active": true
-            }
-          ]
-        },
         "Rows": {
           "projections": [
             {
@@ -47,9 +28,38 @@
               "queryRef": "dEstruturaDRE.contaGerencial",
               "nativeQueryRef": "contaGerencial",
               "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dPlanoConta"
+                    }
+                  },
+                  "Property": "descricaoN1"
+                }
+              },
+              "queryRef": "dPlanoConta.descricaoN1",
+              "nativeQueryRef": "descricaoN1",
+              "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dPlanoConta"
+                    }
+                  },
+                  "Property": "descricaoN2"
+                }
+              },
+              "queryRef": "dPlanoConta.descricaoN2",
+              "nativeQueryRef": "descricaoN2",
+              "active": false
             }
-          ],
-          "showAll": true
+          ]
         },
         "Values": {
           "projections": [
@@ -88,6 +98,84 @@
         ]
       }
     },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "dEstruturaDRE.contaGerencial"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dEstruturaDRE"
+                    }
+                  },
+                  "Property": "contaGerencial"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "dPlanoConta.descricaoN1"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dPlanoConta"
+                    }
+                  },
+                  "Property": "descricaoN1"
+                }
+              }
+            ],
+            "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "dPlanoConta.descricaoN2"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {
+          "children": [
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'OUTRAS RECEITAS E DESPESAS'"
+                  }
+                }
+              ],
+              "isToggled": true
+            },
+            {
+              "identityValues": [
+                {
+                  "Literal": {
+                    "Value": "'(-) DEPRECIAÇÃO E AMORTIZAÇÃO'"
+                  }
+                }
+              ],
+              "isToggled": true
+            }
+          ]
+        }
+      }
+    ],
     "objects": {
       "values": [
         {
@@ -136,15 +224,29 @@
         "type": "Advanced"
       },
       {
-        "name": "85791c6c75cfed3ec180",
+        "name": "5187cc2fe7e434f395ce",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "dEstruturaDRE"
+                "Entity": "dPlanoConta"
               }
             },
-            "Property": "empresa"
+            "Property": "descricaoN1"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "20a865f5b128c654286d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dPlanoConta"
+              }
+            },
+            "Property": "descricaoN2"
           }
         },
         "type": "Categorical"
