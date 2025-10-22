@@ -76,6 +76,34 @@
               },
               "queryRef": "Medidas.$ Realizado",
               "nativeQueryRef": "$ Realizado"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "$ Orçado"
+                }
+              },
+              "queryRef": "Medidas.$ Orçado",
+              "nativeQueryRef": "$ Orçado"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "$ Previsto"
+                }
+              },
+              "queryRef": "Medidas.$ Previsto",
+              "nativeQueryRef": "$ Previsto"
             }
           ]
         }
@@ -250,6 +278,34 @@
           }
         },
         "type": "Categorical"
+      },
+      {
+        "name": "99c60a3a8c5ad5e7b359",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "$ Orçado"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c7177717c13bbd01dd1c",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "$ Previsto"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

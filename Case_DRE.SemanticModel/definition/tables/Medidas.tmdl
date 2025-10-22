@@ -39,6 +39,82 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
+	measure '$ total Orçado' =
+			
+			SUMX(
+			    fOrcamento,
+			    fOrcamento[valor] * RELATED(dPlanoConta[tipoLancamento])
+			)
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		lineageTag: decff684-2827-4c42-a8f9-b3915367ae67
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure '$ total Previsto' =
+			
+			SUMX(
+			    fPrevisao,
+			    fPrevisao[valor] * RELATED(dPlanoConta[tipoLancamento])
+			)
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		lineageTag: fa2ca25d-27b4-45b5-979e-e04194d1ea67
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure '$ Orçado' =
+			
+			VAR vSubtotal = SELECTEDVALUE(dEstruturaDRE[subtotal])
+			VAR vIndex = SELECTEDVALUE(dEstruturaDRE[index])
+			VAR vDetalharN2 = SELECTEDVALUE(dPlanoConta[detalharN2])
+			VAR vTotal = [$ total Orçado]
+			VAR vAcumulado =
+			CALCULATE(
+			    [$ total Orçado],
+			    ALLSELECTED(dEstruturaDRE),
+			    VALUES(dEstruturaDRE[empresa]), //Devolva o contexto de empresa
+			    dEstruturaDRE[index] < vIndex
+			)
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    vSubtotal = 1 && ISINSCOPE(dPlanoConta[descricaoN1]), BLANK(),
+			    vDetalharN2 = 0 && ISINSCOPE(dPlanoConta[descricaoN2]), BLANK(),
+			    vSubtotal = 0, vTotal,
+			    vSubtotal = 1, vAcumulado,
+			    BLANK()
+			)
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		lineageTag: baec2451-91b9-4d3a-bc58-70eb9d8e51bb
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure '$ Previsto' =
+			
+			VAR vSubtotal = SELECTEDVALUE(dEstruturaDRE[subtotal])
+			VAR vIndex = SELECTEDVALUE(dEstruturaDRE[index])
+			VAR vDetalharN2 = SELECTEDVALUE(dPlanoConta[detalharN2])
+			VAR vTotal = [$ total Previsto]
+			VAR vAcumulado =
+			CALCULATE(
+			    [$ total Previsto],
+			    ALLSELECTED(dEstruturaDRE),
+			    VALUES(dEstruturaDRE[empresa]), //Devolva o contexto de empresa
+			    dEstruturaDRE[index] < vIndex
+			)
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    vSubtotal = 1 && ISINSCOPE(dPlanoConta[descricaoN1]), BLANK(),
+			    vDetalharN2 = 0 && ISINSCOPE(dPlanoConta[descricaoN2]), BLANK(),
+			    vSubtotal = 0, vTotal,
+			    vSubtotal = 1, vAcumulado,
+			    BLANK()
+			)
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		lineageTag: cee615df-2a41-4b6f-ba9a-170e16fd6eff
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
 	column 'Coluna 1'
 		dataType: string
 		isHidden
