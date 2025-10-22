@@ -3173,6 +3173,154 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
+			    },
+			    "medida.realizado_YTD": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "$ Realizado YTD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "$ realizado YTD": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "$ realizado year to date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.623
+			          }
+			        },
+			        {
+			          "dollar realizado ytd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "Realizado YTD": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.meta_YTD": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "$ Meta YTD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "$ meta YTD": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "$ meta year to date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.623
+			          }
+			        },
+			        {
+			          "dollar meta ytd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "Meta YTD": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.meta_vs_realizado_YTD": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "% Meta vs Realizado YTD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "% meta vs realizado YTD": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "% meta vs realizado year to date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.66
+			          }
+			        },
+			        {
+			          "percentage meta vs realizado ytd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "pct meta vs realizado ytd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "% YTD": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
@@ -3945,6 +4093,468 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "d_estrutura_DREs_have_d_plano_contas"
+			        }
+			      ]
+			    },
+			    "f_previsao_has_medida_meta_vs_realizado_YTD": {
+			      "Binding": {
+			        "ConceptualEntity": "fPrevisao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_previsao": {
+			          "Target": {
+			            "Entity": "f_previsao"
+			          }
+			        },
+			        "medida.meta_vs_realizado_YTD": {
+			          "Target": {
+			            "Entity": "medida.meta_vs_realizado_YTD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_previsao"
+			            },
+			            "Object": {
+			              "Role": "medida.meta_vs_realizado_YTD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_previsaos_have__meta_vs_realizado_YTD"
+			        }
+			      ]
+			    },
+			    "f_orcamento_has_medida_meta_vs_realizado_YTD": {
+			      "Binding": {
+			        "ConceptualEntity": "fOrcamento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_orcamento": {
+			          "Target": {
+			            "Entity": "f_orcamento"
+			          }
+			        },
+			        "medida.meta_vs_realizado_YTD": {
+			          "Target": {
+			            "Entity": "medida.meta_vs_realizado_YTD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_orcamento"
+			            },
+			            "Object": {
+			              "Role": "medida.meta_vs_realizado_YTD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_orcamentos_have__meta_vs_realizado_YTD"
+			        }
+			      ]
+			    },
+			    "f_lancamento_has_medida_meta_vs_realizado_YTD": {
+			      "Binding": {
+			        "ConceptualEntity": "fLancamentos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_lancamento": {
+			          "Target": {
+			            "Entity": "f_lancamento"
+			          }
+			        },
+			        "medida.meta_vs_realizado_YTD": {
+			          "Target": {
+			            "Entity": "medida.meta_vs_realizado_YTD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_lancamento"
+			            },
+			            "Object": {
+			              "Role": "medida.meta_vs_realizado_YTD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_lancamentos_have__meta_vs_realizado_YTD"
+			        }
+			      ]
+			    },
+			    "d_plano_conta_has_medida_meta_vs_realizado_YTD": {
+			      "Binding": {
+			        "ConceptualEntity": "dPlanoConta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_plano_conta": {
+			          "Target": {
+			            "Entity": "d_plano_conta"
+			          }
+			        },
+			        "medida.meta_vs_realizado_YTD": {
+			          "Target": {
+			            "Entity": "medida.meta_vs_realizado_YTD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_plano_conta"
+			            },
+			            "Object": {
+			              "Role": "medida.meta_vs_realizado_YTD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_plano_contas_have__meta_vs_realizado_YTD"
+			        }
+			      ]
+			    },
+			    "d_estrutura_DRE_has_medida_meta_vs_realizado_YTD": {
+			      "Binding": {
+			        "ConceptualEntity": "dEstruturaDRE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_estrutura_DRE": {
+			          "Target": {
+			            "Entity": "d_estrutura_DRE"
+			          }
+			        },
+			        "medida.meta_vs_realizado_YTD": {
+			          "Target": {
+			            "Entity": "medida.meta_vs_realizado_YTD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_estrutura_DRE"
+			            },
+			            "Object": {
+			              "Role": "medida.meta_vs_realizado_YTD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_estrutura_DREs_have__meta_vs_realizado_YTD"
+			        }
+			      ]
+			    },
+			    "aux_meta_has_medida_meta_vs_realizado_YTD": {
+			      "Binding": {
+			        "ConceptualEntity": "auxMeta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aux_meta": {
+			          "Target": {
+			            "Entity": "aux_meta"
+			          }
+			        },
+			        "medida.meta_vs_realizado_YTD": {
+			          "Target": {
+			            "Entity": "medida.meta_vs_realizado_YTD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aux_meta"
+			            },
+			            "Object": {
+			              "Role": "medida.meta_vs_realizado_YTD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aux_meta_have__meta_vs_realizado_YTD"
+			        }
+			      ]
+			    },
+			    "f_previsao_has_medida_meta_YTD": {
+			      "Binding": {
+			        "ConceptualEntity": "fPrevisao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_previsao": {
+			          "Target": {
+			            "Entity": "f_previsao"
+			          }
+			        },
+			        "medida.meta_YTD": {
+			          "Target": {
+			            "Entity": "medida.meta_YTD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_previsao"
+			            },
+			            "Object": {
+			              "Role": "medida.meta_YTD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_previsaos_have__meta_YTD"
+			        }
+			      ]
+			    },
+			    "f_orcamento_has_medida_meta_YTD": {
+			      "Binding": {
+			        "ConceptualEntity": "fOrcamento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_orcamento": {
+			          "Target": {
+			            "Entity": "f_orcamento"
+			          }
+			        },
+			        "medida.meta_YTD": {
+			          "Target": {
+			            "Entity": "medida.meta_YTD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_orcamento"
+			            },
+			            "Object": {
+			              "Role": "medida.meta_YTD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_orcamentos_have__meta_YTD"
+			        }
+			      ]
+			    },
+			    "d_plano_conta_has_medida_meta_YTD": {
+			      "Binding": {
+			        "ConceptualEntity": "dPlanoConta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_plano_conta": {
+			          "Target": {
+			            "Entity": "d_plano_conta"
+			          }
+			        },
+			        "medida.meta_YTD": {
+			          "Target": {
+			            "Entity": "medida.meta_YTD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_plano_conta"
+			            },
+			            "Object": {
+			              "Role": "medida.meta_YTD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_plano_contas_have__meta_YTD"
+			        }
+			      ]
+			    },
+			    "d_estrutura_DRE_has_medida_meta_YTD": {
+			      "Binding": {
+			        "ConceptualEntity": "dEstruturaDRE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_estrutura_DRE": {
+			          "Target": {
+			            "Entity": "d_estrutura_DRE"
+			          }
+			        },
+			        "medida.meta_YTD": {
+			          "Target": {
+			            "Entity": "medida.meta_YTD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_estrutura_DRE"
+			            },
+			            "Object": {
+			              "Role": "medida.meta_YTD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_estrutura_DREs_have__meta_YTD"
+			        }
+			      ]
+			    },
+			    "aux_meta_has_medida_meta_YTD": {
+			      "Binding": {
+			        "ConceptualEntity": "auxMeta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aux_meta": {
+			          "Target": {
+			            "Entity": "aux_meta"
+			          }
+			        },
+			        "medida.meta_YTD": {
+			          "Target": {
+			            "Entity": "medida.meta_YTD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aux_meta"
+			            },
+			            "Object": {
+			              "Role": "medida.meta_YTD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aux_meta_have__meta_YTD"
+			        }
+			      ]
+			    },
+			    "f_lancamento_has_medida_realizado_YTD": {
+			      "Binding": {
+			        "ConceptualEntity": "fLancamentos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_lancamento": {
+			          "Target": {
+			            "Entity": "f_lancamento"
+			          }
+			        },
+			        "medida.realizado_YTD": {
+			          "Target": {
+			            "Entity": "medida.realizado_YTD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_lancamento"
+			            },
+			            "Object": {
+			              "Role": "medida.realizado_YTD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_lancamentos_have__realizado_YTD"
+			        }
+			      ]
+			    },
+			    "d_plano_conta_has_medida_realizado_YTD": {
+			      "Binding": {
+			        "ConceptualEntity": "dPlanoConta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_plano_conta": {
+			          "Target": {
+			            "Entity": "d_plano_conta"
+			          }
+			        },
+			        "medida.realizado_YTD": {
+			          "Target": {
+			            "Entity": "medida.realizado_YTD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_plano_conta"
+			            },
+			            "Object": {
+			              "Role": "medida.realizado_YTD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_plano_contas_have__realizado_YTD"
+			        }
+			      ]
+			    },
+			    "d_estrutura_DRE_has_medida_realizado_YTD": {
+			      "Binding": {
+			        "ConceptualEntity": "dEstruturaDRE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_estrutura_DRE": {
+			          "Target": {
+			            "Entity": "d_estrutura_DRE"
+			          }
+			        },
+			        "medida.realizado_YTD": {
+			          "Target": {
+			            "Entity": "medida.realizado_YTD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_estrutura_DRE"
+			            },
+			            "Object": {
+			              "Role": "medida.realizado_YTD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_estrutura_DREs_have__realizado_YTD"
 			        }
 			      ]
 			    },

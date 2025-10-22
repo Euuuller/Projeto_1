@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "fa1a7cf16c16d3200cca",
   "position": {
-    "x": 294.76971116315377,
-    "y": 162.87275565964092,
+    "x": 0,
+    "y": 264.79313036690087,
     "z": 0,
     "height": 455.64402810304449,
-    "width": 792.38095238095241
+    "width": 1280
   },
   "visual": {
     "visualType": "pivotTable",
@@ -42,7 +42,7 @@
               },
               "queryRef": "dPlanoConta.descricaoN1",
               "nativeQueryRef": "descricaoN1",
-              "active": true
+              "active": false
             },
             {
               "field": {
@@ -63,6 +63,20 @@
         },
         "Values": {
           "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "KPI Flag"
+                }
+              },
+              "queryRef": "Medidas.KPI Flag",
+              "nativeQueryRef": "KPI Flag"
+            },
             {
               "field": {
                 "Measure": {
@@ -107,6 +121,51 @@
               "queryRef": "Medidas.% Meta vs Realizado",
               "nativeQueryRef": "%",
               "displayName": "%"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "$ Realizado YTD"
+                }
+              },
+              "queryRef": "Medidas.$ Realizado YTD",
+              "nativeQueryRef": "Realizado YTD",
+              "displayName": "Realizado YTD"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "$ Meta YTD"
+                }
+              },
+              "queryRef": "Medidas.$ Meta YTD",
+              "nativeQueryRef": "Meta YTD",
+              "displayName": "Meta YTD"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "% Meta vs Realizado YTD"
+                }
+              },
+              "queryRef": "Medidas.% Meta vs Realizado YTD",
+              "nativeQueryRef": "% YTD",
+              "displayName": "% YTD"
             }
           ]
         }
@@ -194,30 +253,7 @@
             "isPinned": true
           }
         ],
-        "root": {
-          "children": [
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'OUTRAS RECEITAS E DESPESAS'"
-                  }
-                }
-              ],
-              "isToggled": true
-            },
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'(-) DEPRECIAÇÃO E AMORTIZAÇÃO'"
-                  }
-                }
-              ],
-              "isToggled": true
-            }
-          ]
-        }
+        "root": {}
       }
     ],
     "objects": {
@@ -338,6 +374,112 @@
             ],
             "metadata": "Medidas.% Meta vs Realizado"
           }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "Medidas.% Meta vs Realizado YTD"
+          }
+        },
+        {
+          "properties": {
+            "icon": {
+              "kind": "Icon",
+              "layout": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'After'"
+                  }
+                }
+              },
+              "verticalAlignment": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Top'"
+                  }
+                }
+              },
+              "value": {
+                "expr": {
+                  "Conditional": {
+                    "Cases": [
+                      {
+                        "Condition": {
+                          "Comparison": {
+                            "ComparisonKind": 2,
+                            "Left": {
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Entity": "Medidas"
+                                  }
+                                },
+                                "Property": "% Meta vs Realizado YTD"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "0D"
+                              }
+                            }
+                          }
+                        },
+                        "Value": {
+                          "Literal": {
+                            "Value": "'ColoredArrowUp'"
+                          }
+                        }
+                      },
+                      {
+                        "Condition": {
+                          "Comparison": {
+                            "ComparisonKind": 3,
+                            "Left": {
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Entity": "Medidas"
+                                  }
+                                },
+                                "Property": "% Meta vs Realizado YTD"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "0D"
+                              }
+                            }
+                          }
+                        },
+                        "Value": {
+                          "Literal": {
+                            "Value": "'ColoredArrowDown'"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "Medidas.% Meta vs Realizado YTD"
+          }
         }
       ]
     },
@@ -425,6 +567,62 @@
               }
             },
             "Property": "% Meta vs Realizado"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "5e0bf1d6699041ef6270",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "$ Realizado YTD"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "a2118e7449bf5f900095",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "% Meta vs Realizado YTD"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "60e50eab768784601b6b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "$ Meta YTD"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ed66c222e0f0b4afa832",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "KPI Flag"
           }
         },
         "type": "Advanced"

@@ -140,6 +140,57 @@ table Medidas
 		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: d9c65fca-f52b-4286-b504-512b35185dd3
 
+	measure '$ Realizado YTD' =
+			
+			CALCULATE(
+			    [$ Realizado],
+			    DATESYTD(dCalendario[Data])
+			)
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		lineageTag: 421f0782-ab4d-4db0-82d0-eee1b053b939
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure '$ Meta YTD' =
+			
+			CALCULATE(
+			    [$ Meta],
+			    DATESYTD(dCalendario[Data])
+			)
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		lineageTag: 893221a6-75a5-42c0-bc17-0b6358d64b1b
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure '% Meta vs Realizado YTD' =
+			
+			VAR vMeta = [$ Meta YTD]
+			VAR vRealizado = [$ Realizado YTD]
+			VAR vDif = vRealizado - vMeta
+			RETURN
+			DIVIDE(
+			    vDif,
+			    ABS(vMeta)
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: ebcca698-3b95-4c1e-8dff-ea99deda7305
+
+	measure 'KPI Flag Mês' = IF([% Meta vs Realizado] < 0, 1, 0)
+		formatString: 0
+		lineageTag: 5a6e337b-30e0-4189-ac18-1c268e280597
+
+	measure 'KPI Flag YTD' = IF([% Meta vs Realizado YTD] < 0, 1, 0)
+		formatString: 0
+		lineageTag: 507d78f3-c75c-4d40-8878-f5b6f508c292
+
+	measure 'KPI Flag' =
+			
+			IF(
+			    [KPI Flag Mês] = 1 && [KPI Flag YTD] = 1,
+			    "🚩"
+			)
+		lineageTag: df1a1cbc-bfc6-4c52-aecb-df66c18b865c
+
 	column 'Coluna 1'
 		dataType: string
 		isHidden
