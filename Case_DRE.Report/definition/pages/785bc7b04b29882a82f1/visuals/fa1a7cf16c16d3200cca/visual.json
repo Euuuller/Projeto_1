@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "fa1a7cf16c16d3200cca",
   "position": {
-    "x": 393.92097264437689,
-    "y": 358.90577507598783,
+    "x": 294.76971116315377,
+    "y": 162.87275565964092,
     "z": 0,
-    "height": 360.85106382978722,
-    "width": 886.07902735562311
+    "height": 455.64402810304449,
+    "width": 792.38095238095241
   },
   "visual": {
     "visualType": "pivotTable",
@@ -75,7 +75,8 @@
                 }
               },
               "queryRef": "Medidas.$ Realizado",
-              "nativeQueryRef": "$ Realizado"
+              "nativeQueryRef": "Realizado",
+              "displayName": "Realizado"
             },
             {
               "field": {
@@ -89,7 +90,23 @@
                 }
               },
               "queryRef": "Medidas.$ Meta",
-              "nativeQueryRef": "$ Meta"
+              "nativeQueryRef": "Meta",
+              "displayName": "Meta"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "% Meta vs Realizado"
+                }
+              },
+              "queryRef": "Medidas.% Meta vs Realizado",
+              "nativeQueryRef": "%",
+              "displayName": "%"
             }
           ]
         }
@@ -98,16 +115,29 @@
         "sort": [
           {
             "field": {
-              "Measure": {
+              "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Medidas"
+                    "Entity": "dEstruturaDRE"
                   }
                 },
-                "Property": "$ Realizado"
+                "Property": "contaGerencial"
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
+          },
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "dPlanoConta"
+                  }
+                },
+                "Property": "descricaoN1"
+              }
+            },
+            "direction": "Ascending"
           }
         ]
       }
@@ -202,6 +232,112 @@
               }
             }
           }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "Medidas.% Meta vs Realizado"
+          }
+        },
+        {
+          "properties": {
+            "icon": {
+              "kind": "Icon",
+              "layout": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'After'"
+                  }
+                }
+              },
+              "verticalAlignment": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Top'"
+                  }
+                }
+              },
+              "value": {
+                "expr": {
+                  "Conditional": {
+                    "Cases": [
+                      {
+                        "Condition": {
+                          "Comparison": {
+                            "ComparisonKind": 2,
+                            "Left": {
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Entity": "Medidas"
+                                  }
+                                },
+                                "Property": "% Meta vs Realizado"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "0D"
+                              }
+                            }
+                          }
+                        },
+                        "Value": {
+                          "Literal": {
+                            "Value": "'ColoredArrowUp'"
+                          }
+                        }
+                      },
+                      {
+                        "Condition": {
+                          "Comparison": {
+                            "ComparisonKind": 3,
+                            "Left": {
+                              "Measure": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Entity": "Medidas"
+                                  }
+                                },
+                                "Property": "% Meta vs Realizado"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "0D"
+                              }
+                            }
+                          }
+                        },
+                        "Value": {
+                          "Literal": {
+                            "Value": "'ColoredArrowDown'"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 0
+                }
+              }
+            ],
+            "metadata": "Medidas.% Meta vs Realizado"
+          }
         }
       ]
     },
@@ -275,6 +411,20 @@
               }
             },
             "Property": "$ Meta"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "07bce231364703e41386",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "% Meta vs Realizado"
           }
         },
         "type": "Advanced"

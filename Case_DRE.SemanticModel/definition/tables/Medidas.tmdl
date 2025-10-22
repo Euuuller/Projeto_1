@@ -127,6 +127,19 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
+	measure '% Meta vs Realizado' =
+			
+			VAR vMeta = [$ Meta]
+			VAR vRealizado = [$ Realizado]
+			VAR vDif = vRealizado - vMeta
+			RETURN
+			DIVIDE(
+			    vDif,
+			    ABS(vMeta)
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: d9c65fca-f52b-4286-b504-512b35185dd3
+
 	column 'Coluna 1'
 		dataType: string
 		isHidden
