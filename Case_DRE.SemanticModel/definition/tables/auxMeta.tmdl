@@ -1,0 +1,48 @@
+table auxMeta
+	lineageTag: 675b4fcb-ae25-48a6-ad18-d1816e86f4c6
+
+	column auxMeta
+		lineageTag: d14bc37a-404c-4adc-aae5-32a06c6335af
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'auxMeta Pedido'
+
+		relatedColumnDetails
+			groupByColumn: 'auxMeta Campos'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'auxMeta Campos'
+		isHidden
+		lineageTag: 0df78641-b8d7-451c-9cac-8ae3d7a588f3
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'auxMeta Pedido'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'auxMeta Pedido'
+		isHidden
+		formatString: 0
+		lineageTag: 1227d504-f6d8-4a30-9bce-16224476479f
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition auxMeta = calculated
+		mode: import
+		source =
+				{
+				    ("Orçado", NAMEOF('Medidas'[$ Orçado]), 0),
+				    ("Previsto", NAMEOF('Medidas'[$ Previsto]), 1)
+				}
+
+	annotation PBI_Id = f0a2ef92f2524ec6ad87f204cfd1b1de
+

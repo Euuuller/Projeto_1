@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "fa1a7cf16c16d3200cca",
   "position": {
-    "x": 283.65369340746622,
-    "y": 218.58617950754567,
+    "x": 393.92097264437689,
+    "y": 358.90577507598783,
     "z": 0,
-    "height": 360.92136616362188,
-    "width": 886.5448768864178
+    "height": 360.85106382978722,
+    "width": 886.07902735562311
   },
   "visual": {
     "visualType": "pivotTable",
@@ -85,25 +85,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "$ Orçado"
+                  "Property": "$ Meta"
                 }
               },
-              "queryRef": "Medidas.$ Orçado",
-              "nativeQueryRef": "$ Orçado"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Medidas"
-                    }
-                  },
-                  "Property": "$ Previsto"
-                }
-              },
-              "queryRef": "Medidas.$ Previsto",
-              "nativeQueryRef": "$ Previsto"
+              "queryRef": "Medidas.$ Meta",
+              "nativeQueryRef": "$ Meta"
             }
           ]
         }
@@ -280,7 +266,7 @@
         "type": "Categorical"
       },
       {
-        "name": "99c60a3a8c5ad5e7b359",
+        "name": "a27f2176e2cf9d3b3a80",
         "field": {
           "Measure": {
             "Expression": {
@@ -288,21 +274,7 @@
                 "Entity": "Medidas"
               }
             },
-            "Property": "$ Orçado"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "c7177717c13bbd01dd1c",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "$ Previsto"
+            "Property": "$ Meta"
           }
         },
         "type": "Advanced"

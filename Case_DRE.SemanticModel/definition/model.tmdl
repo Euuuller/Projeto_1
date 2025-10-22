@@ -30,6 +30,7 @@ ref table dCalendario
 ref table LocalDateTable_af5929d3-98c9-4f43-961e-bc00f58756d2
 ref table LocalDateTable_792c3684-01e6-488d-a888-176f90b1bc61
 ref table Medidas
+ref table auxMeta
 
 ref cultureInfo pt-BR
 

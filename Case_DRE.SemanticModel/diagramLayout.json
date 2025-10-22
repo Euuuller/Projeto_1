@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 0,
+        "x": 255,
         "y": 0
       },
       "nodes": [
@@ -82,6 +82,32 @@
           "nodeLineageTag": "fcb3896f-4709-4bb1-820a-f0e72acc33f4",
           "size": {
             "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1054,
+            "y": 213.5
+          },
+          "nodeIndex": "Medidas",
+          "nodeLineageTag": "9ed1958b-40a2-4250-bc9f-e809ae31a944",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1338,
+            "y": 213.5
+          },
+          "nodeIndex": "auxMeta",
+          "nodeLineageTag": "675b4fcb-ae25-48a6-ad18-d1816e86f4c6",
+          "size": {
+            "height": 152,
             "width": 234
           },
           "zIndex": 0

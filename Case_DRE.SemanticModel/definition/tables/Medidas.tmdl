@@ -115,6 +115,18 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
+	measure '$ Meta' =
+			
+			IF(
+			    SELECTEDVALUE(auxMeta[auxMeta Pedido]) = 0,
+			    [$ Orçado],
+			    [$ Previsto]
+			)
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		lineageTag: c63d9d35-9e80-436b-b6dd-19cb28c9794d
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
 	column 'Coluna 1'
 		dataType: string
 		isHidden
