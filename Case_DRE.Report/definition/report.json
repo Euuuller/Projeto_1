@@ -11,13 +11,13 @@
       "type": "SharedResources"
     },
     "customTheme": {
-      "name": "AccessibleDefault",
+      "name": "DRE7975212777528385.json",
       "reportVersionAtImport": {
         "visual": "2.1.0",
         "report": "3.0.0",
         "page": "2.3.0"
       },
-      "type": "SharedResources"
+      "type": "RegisteredResources"
     }
   },
   "objects": {
@@ -43,6 +43,13 @@
                 "Value": "true"
               }
             }
+          },
+          "visible": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
           }
         }
       }
@@ -57,11 +64,6 @@
           "name": "CY25SU10",
           "path": "BaseThemes/CY25SU10.json",
           "type": "BaseTheme"
-        },
-        {
-          "name": "AccessibleDefault",
-          "path": "BuiltInThemes/AccessibleDefault.json",
-          "type": "CustomTheme"
         }
       ]
     },
@@ -73,6 +75,11 @@
           "name": "PG1-V36029923692162061.png",
           "path": "PG1-V36029923692162061.png",
           "type": "Image"
+        },
+        {
+          "name": "DRE7975212777528385.json",
+          "path": "DRE7975212777528385.json",
+          "type": "CustomTheme"
         }
       ]
     }

@@ -3321,637 +3321,216 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
+			    },
+			    "medida.KPI_flag_mês": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "KPI Flag Mês"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI flag mês": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.KPI_flag_YTD": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "KPI Flag YTD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI flag YTD": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "YTD": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "flag YTD": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "kpi flag year to date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.623
+			          }
+			        },
+			        {
+			          "flag year to date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "year to date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.573
+			          }
+			        }
+			      ]
+			    },
+			    "medida.KPI_flag": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "KPI Flag"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "KPI flag": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "flag": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "kpi ensign": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "kpi pennant": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "kpi pennon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "kpi emblem": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "kpi streamer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "ensign": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "pennant": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "pennon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "emblem": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "streamer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "KPI": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "d_calendario_inicio_me_hierarquia_de_data_has_d_calendario_inicio_me_ano": {
-			      "Binding": {
-			        "ConceptualEntity": "dCalendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "d_calendario.inicio_me.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "d_calendario.inicio_me.hierarquia_de_data"
-			          }
-			        },
-			        "d_calendario.inicio_me.ano": {
-			          "Target": {
-			            "Entity": "d_calendario.inicio_me.ano"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_calendario.inicio_me.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "d_calendario.inicio_me.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos"
-			        }
-			      ]
-			    },
-			    "d_calendario_inicio_me_has_hierarquia_de_data": {
-			      "Binding": {
-			        "ConceptualEntity": "dCalendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "d_calendario.inicio_me": {
-			          "Target": {
-			            "Entity": "d_calendario.inicio_me"
-			          }
-			        },
-			        "d_calendario.inicio_me.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "d_calendario.inicio_me.hierarquia_de_data"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_calendario.inicio_me"
-			            },
-			            "Object": {
-			              "Role": "d_calendario.inicio_me.hierarquia_de_data"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "inicio_me_have_hierarquia_de_data"
-			        }
-			      ]
-			    },
-			    "d_calendario_data_mê_has_d_calendario_data_dia": {
-			      "Binding": {
-			        "ConceptualEntity": "dCalendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "d_calendario.data.mê": {
-			          "Target": {
-			            "Entity": "d_calendario.data.mê"
-			          }
-			        },
-			        "d_calendario.data.dia": {
-			          "Target": {
-			            "Entity": "d_calendario.data.dia"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_calendario.data.mê"
-			            },
-			            "Object": {
-			              "Role": "d_calendario.data.dia"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_have_dias"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_calendario.data.dia"
-			            },
-			            "Object": {
-			              "Role": "d_calendario.data.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dias_have_mê"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "d_calendario.data.dia"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "d_calendario.data.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dias_are_in_mê"
-			        }
-			      ]
-			    },
-			    "d_calendario_data_trimestre_has_d_calendario_data_mê": {
-			      "Binding": {
-			        "ConceptualEntity": "dCalendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "d_calendario.data.trimestre": {
-			          "Target": {
-			            "Entity": "d_calendario.data.trimestre"
-			          }
-			        },
-			        "d_calendario.data.mê": {
-			          "Target": {
-			            "Entity": "d_calendario.data.mê"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_calendario.data.trimestre"
-			            },
-			            "Object": {
-			              "Role": "d_calendario.data.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_mê"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_calendario.data.mê"
-			            },
-			            "Object": {
-			              "Role": "d_calendario.data.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_have_trimestres"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "d_calendario.data.mê"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "d_calendario.data.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "mê_are_in_trimestres"
-			        }
-			      ]
-			    },
-			    "d_calendario_data_ano_has_d_calendario_data_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "dCalendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "d_calendario.data.ano": {
-			          "Target": {
-			            "Entity": "d_calendario.data.ano"
-			          }
-			        },
-			        "d_calendario.data.trimestre": {
-			          "Target": {
-			            "Entity": "d_calendario.data.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_calendario.data.ano"
-			            },
-			            "Object": {
-			              "Role": "d_calendario.data.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "anos_have_trimestres"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_calendario.data.trimestre"
-			            },
-			            "Object": {
-			              "Role": "d_calendario.data.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_have_anos"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "d_calendario.data.trimestre"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "d_calendario.data.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "trimestres_are_in_anos"
-			        }
-			      ]
-			    },
-			    "d_calendario_data_hierarquia_de_data_has_d_calendario_data_dia": {
-			      "Binding": {
-			        "ConceptualEntity": "dCalendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "d_calendario.data.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "d_calendario.data.hierarquia_de_data"
-			          }
-			        },
-			        "d_calendario.data.dia": {
-			          "Target": {
-			            "Entity": "d_calendario.data.dia"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_calendario.data.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "d_calendario.data.dia"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_dias"
-			        }
-			      ]
-			    },
-			    "d_calendario_data_hierarquia_de_data_has_d_calendario_data_mê": {
-			      "Binding": {
-			        "ConceptualEntity": "dCalendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "d_calendario.data.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "d_calendario.data.hierarquia_de_data"
-			          }
-			        },
-			        "d_calendario.data.mê": {
-			          "Target": {
-			            "Entity": "d_calendario.data.mê"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_calendario.data.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "d_calendario.data.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_mê"
-			        }
-			      ]
-			    },
-			    "d_calendario_data_hierarquia_de_data_has_d_calendario_data_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "dCalendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "d_calendario.data.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "d_calendario.data.hierarquia_de_data"
-			          }
-			        },
-			        "d_calendario.data.trimestre": {
-			          "Target": {
-			            "Entity": "d_calendario.data.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_calendario.data.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "d_calendario.data.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres"
-			        }
-			      ]
-			    },
-			    "d_calendario_data_hierarquia_de_data_has_d_calendario_data_ano": {
-			      "Binding": {
-			        "ConceptualEntity": "dCalendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "d_calendario.data.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "d_calendario.data.hierarquia_de_data"
-			          }
-			        },
-			        "d_calendario.data.ano": {
-			          "Target": {
-			            "Entity": "d_calendario.data.ano"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_calendario.data.hierarquia_de_data"
-			            },
-			            "Object": {
-			              "Role": "d_calendario.data.ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos1"
-			        }
-			      ]
-			    },
-			    "d_calendario_data_has_hierarquia_de_data": {
-			      "Binding": {
-			        "ConceptualEntity": "dCalendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "d_calendario.data": {
-			          "Target": {
-			            "Entity": "d_calendario.data"
-			          }
-			        },
-			        "d_calendario.data.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "d_calendario.data.hierarquia_de_data"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_calendario.data"
-			            },
-			            "Object": {
-			              "Role": "d_calendario.data.hierarquia_de_data"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "data_have_hierarquia_de_data"
-			        }
-			      ]
-			    },
-			    "f_lancamento_has_d_plano_conta": {
-			      "Binding": {
-			        "ConceptualEntity": "fLancamentos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "f_lancamento": {
-			          "Target": {
-			            "Entity": "f_lancamento"
-			          }
-			        },
-			        "d_plano_conta": {
-			          "Target": {
-			            "Entity": "d_plano_conta"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "f_lancamento"
-			            },
-			            "Object": {
-			              "Role": "d_plano_conta"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "f_lancamentos_have_d_plano_contas"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_plano_conta"
-			            },
-			            "Object": {
-			              "Role": "f_lancamento"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "d_plano_contas_have_f_lancamentos"
-			        }
-			      ]
-			    },
-			    "f_lancamento_has_d_calendario": {
-			      "Binding": {
-			        "ConceptualEntity": "fLancamentos"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "f_lancamento": {
-			          "Target": {
-			            "Entity": "f_lancamento"
-			          }
-			        },
-			        "d_calendario": {
-			          "Target": {
-			            "Entity": "d_calendario"
-			          },
-			          "Nouns": [
-			            {
-			              "competencia data": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "f_lancamento"
-			            },
-			            "Object": {
-			              "Role": "d_calendario"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "f_lancamentos_have_d_calendarios"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_calendario"
-			            },
-			            "Object": {
-			              "Role": "f_lancamento"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "d_calendarios_have_f_lancamentos"
-			        }
-			      ]
-			    },
-			    "f_previsao_has_d_plano_conta": {
-			      "Binding": {
-			        "ConceptualEntity": "fPrevisao"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "f_previsao": {
-			          "Target": {
-			            "Entity": "f_previsao"
-			          }
-			        },
-			        "d_plano_conta": {
-			          "Target": {
-			            "Entity": "d_plano_conta"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "f_previsao"
-			            },
-			            "Object": {
-			              "Role": "d_plano_conta"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "f_previsaos_have_d_plano_contas"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_plano_conta"
-			            },
-			            "Object": {
-			              "Role": "f_previsao"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "d_plano_contas_have_f_previsaos"
-			        }
-			      ]
-			    },
-			    "f_previsao_has_d_calendario": {
-			      "Binding": {
-			        "ConceptualEntity": "fPrevisao"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "f_previsao": {
-			          "Target": {
-			            "Entity": "f_previsao"
-			          }
-			        },
-			        "d_calendario": {
-			          "Target": {
-			            "Entity": "d_calendario"
-			          },
-			          "Nouns": [
-			            {
-			              "competencia data": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "f_previsao"
-			            },
-			            "Object": {
-			              "Role": "d_calendario"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "f_previsaos_have_d_calendarios"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_calendario"
-			            },
-			            "Object": {
-			              "Role": "f_previsao"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "d_calendarios_have_f_previsaos"
-			        }
-			      ]
-			    },
-			    "f_orcamento_has_d_plano_conta": {
+			    "f_orcamento_has_medida_KPI_flag": {
 			      "Binding": {
 			        "ConceptualEntity": "fOrcamento"
 			      },
@@ -3962,9 +3541,9 @@ cultureInfo pt-BR
 			            "Entity": "f_orcamento"
 			          }
 			        },
-			        "d_plano_conta": {
+			        "medida.KPI_flag": {
 			          "Target": {
-			            "Entity": "d_plano_conta"
+			            "Entity": "medida.KPI_flag"
 			          }
 			        }
 			      },
@@ -3975,82 +3554,49 @@ cultureInfo pt-BR
 			              "Role": "f_orcamento"
 			            },
 			            "Object": {
-			              "Role": "d_plano_conta"
+			              "Role": "medida.KPI_flag"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "f_orcamentos_have_d_plano_contas"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_plano_conta"
-			            },
-			            "Object": {
-			              "Role": "f_orcamento"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "d_plano_contas_have_f_orcamentos"
+			          "ID": "f_orcamentos_have_KPI_flag"
 			        }
 			      ]
 			    },
-			    "f_orcamento_has_d_calendario": {
+			    "f_lancamento_has_medida_KPI_flag": {
 			      "Binding": {
-			        "ConceptualEntity": "fOrcamento"
+			        "ConceptualEntity": "fLancamentos"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "f_orcamento": {
+			        "f_lancamento": {
 			          "Target": {
-			            "Entity": "f_orcamento"
+			            "Entity": "f_lancamento"
 			          }
 			        },
-			        "d_calendario": {
+			        "medida.KPI_flag": {
 			          "Target": {
-			            "Entity": "d_calendario"
-			          },
-			          "Nouns": [
-			            {
-			              "competencia data": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
+			            "Entity": "medida.KPI_flag"
+			          }
 			        }
 			      },
 			      "Phrasings": [
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "f_orcamento"
+			              "Role": "f_lancamento"
 			            },
 			            "Object": {
-			              "Role": "d_calendario"
+			              "Role": "medida.KPI_flag"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "f_orcamentos_have_d_calendarios"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_calendario"
-			            },
-			            "Object": {
-			              "Role": "f_orcamento"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "d_calendarios_have_f_orcamentos"
+			          "ID": "f_lancamentos_have_KPI_flag"
 			        }
 			      ]
 			    },
-			    "d_plano_conta_has_d_estrutura_DRE": {
+			    "d_plano_conta_has_medida_KPI_flag": {
 			      "Binding": {
 			        "ConceptualEntity": "dPlanoConta"
 			      },
@@ -4061,9 +3607,9 @@ cultureInfo pt-BR
 			            "Entity": "d_plano_conta"
 			          }
 			        },
-			        "d_estrutura_DRE": {
+			        "medida.KPI_flag": {
 			          "Target": {
-			            "Entity": "d_estrutura_DRE"
+			            "Entity": "medida.KPI_flag"
 			          }
 			        }
 			      },
@@ -4074,25 +3620,474 @@ cultureInfo pt-BR
 			              "Role": "d_plano_conta"
 			            },
 			            "Object": {
-			              "Role": "d_estrutura_DRE"
+			              "Role": "medida.KPI_flag"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "d_plano_contas_have_d_estrutura_DREs"
+			          "ID": "d_plano_contas_have_KPI_flag"
+			        }
+			      ]
+			    },
+			    "d_estrutura_DRE_has_medida_KPI_flag": {
+			      "Binding": {
+			        "ConceptualEntity": "dEstruturaDRE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_estrutura_DRE": {
+			          "Target": {
+			            "Entity": "d_estrutura_DRE"
+			          }
 			        },
+			        "medida.KPI_flag": {
+			          "Target": {
+			            "Entity": "medida.KPI_flag"
+			          }
+			        }
+			      },
+			      "Phrasings": [
 			        {
 			          "Attribute": {
 			            "Subject": {
 			              "Role": "d_estrutura_DRE"
 			            },
 			            "Object": {
-			              "Role": "d_plano_conta"
+			              "Role": "medida.KPI_flag"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "d_estrutura_DREs_have_d_plano_contas"
+			          "ID": "d_estrutura_DREs_have_KPI_flag"
+			        }
+			      ]
+			    },
+			    "aux_meta_has_medida_KPI_flag": {
+			      "Binding": {
+			        "ConceptualEntity": "auxMeta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aux_meta": {
+			          "Target": {
+			            "Entity": "aux_meta"
+			          }
+			        },
+			        "medida.KPI_flag": {
+			          "Target": {
+			            "Entity": "medida.KPI_flag"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aux_meta"
+			            },
+			            "Object": {
+			              "Role": "medida.KPI_flag"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aux_meta_have_KPI_flag"
+			        }
+			      ]
+			    },
+			    "f_previsao_has_medida_KPI_flag_YTD": {
+			      "Binding": {
+			        "ConceptualEntity": "fPrevisao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_previsao": {
+			          "Target": {
+			            "Entity": "f_previsao"
+			          }
+			        },
+			        "medida.KPI_flag_YTD": {
+			          "Target": {
+			            "Entity": "medida.KPI_flag_YTD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_previsao"
+			            },
+			            "Object": {
+			              "Role": "medida.KPI_flag_YTD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_previsaos_have_KPI_flag_YTD"
+			        }
+			      ]
+			    },
+			    "f_orcamento_has_medida_KPI_flag_YTD": {
+			      "Binding": {
+			        "ConceptualEntity": "fOrcamento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_orcamento": {
+			          "Target": {
+			            "Entity": "f_orcamento"
+			          }
+			        },
+			        "medida.KPI_flag_YTD": {
+			          "Target": {
+			            "Entity": "medida.KPI_flag_YTD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_orcamento"
+			            },
+			            "Object": {
+			              "Role": "medida.KPI_flag_YTD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_orcamentos_have_KPI_flag_YTD"
+			        }
+			      ]
+			    },
+			    "f_lancamento_has_medida_KPI_flag_YTD": {
+			      "Binding": {
+			        "ConceptualEntity": "fLancamentos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_lancamento": {
+			          "Target": {
+			            "Entity": "f_lancamento"
+			          }
+			        },
+			        "medida.KPI_flag_YTD": {
+			          "Target": {
+			            "Entity": "medida.KPI_flag_YTD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_lancamento"
+			            },
+			            "Object": {
+			              "Role": "medida.KPI_flag_YTD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_lancamentos_have_KPI_flag_YTD"
+			        }
+			      ]
+			    },
+			    "d_plano_conta_has_medida_KPI_flag_YTD": {
+			      "Binding": {
+			        "ConceptualEntity": "dPlanoConta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_plano_conta": {
+			          "Target": {
+			            "Entity": "d_plano_conta"
+			          }
+			        },
+			        "medida.KPI_flag_YTD": {
+			          "Target": {
+			            "Entity": "medida.KPI_flag_YTD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_plano_conta"
+			            },
+			            "Object": {
+			              "Role": "medida.KPI_flag_YTD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_plano_contas_have_KPI_flag_YTD"
+			        }
+			      ]
+			    },
+			    "d_estrutura_DRE_has_medida_KPI_flag_YTD": {
+			      "Binding": {
+			        "ConceptualEntity": "dEstruturaDRE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_estrutura_DRE": {
+			          "Target": {
+			            "Entity": "d_estrutura_DRE"
+			          }
+			        },
+			        "medida.KPI_flag_YTD": {
+			          "Target": {
+			            "Entity": "medida.KPI_flag_YTD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_estrutura_DRE"
+			            },
+			            "Object": {
+			              "Role": "medida.KPI_flag_YTD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_estrutura_DREs_have_KPI_flag_YTD"
+			        }
+			      ]
+			    },
+			    "aux_meta_has_medida_KPI_flag_YTD": {
+			      "Binding": {
+			        "ConceptualEntity": "auxMeta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aux_meta": {
+			          "Target": {
+			            "Entity": "aux_meta"
+			          }
+			        },
+			        "medida.KPI_flag_YTD": {
+			          "Target": {
+			            "Entity": "medida.KPI_flag_YTD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aux_meta"
+			            },
+			            "Object": {
+			              "Role": "medida.KPI_flag_YTD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aux_meta_have_KPI_flag_YTD"
+			        }
+			      ]
+			    },
+			    "f_previsao_has_medida_KPI_flag_mês": {
+			      "Binding": {
+			        "ConceptualEntity": "fPrevisao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_previsao": {
+			          "Target": {
+			            "Entity": "f_previsao"
+			          }
+			        },
+			        "medida.KPI_flag_mês": {
+			          "Target": {
+			            "Entity": "medida.KPI_flag_mês"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_previsao"
+			            },
+			            "Object": {
+			              "Role": "medida.KPI_flag_mês"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_previsaos_have_KPI_flag_mês"
+			        }
+			      ]
+			    },
+			    "f_orcamento_has_medida_KPI_flag_mês": {
+			      "Binding": {
+			        "ConceptualEntity": "fOrcamento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_orcamento": {
+			          "Target": {
+			            "Entity": "f_orcamento"
+			          }
+			        },
+			        "medida.KPI_flag_mês": {
+			          "Target": {
+			            "Entity": "medida.KPI_flag_mês"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_orcamento"
+			            },
+			            "Object": {
+			              "Role": "medida.KPI_flag_mês"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_orcamentos_have_KPI_flag_mês"
+			        }
+			      ]
+			    },
+			    "f_lancamento_has_medida_KPI_flag_mês": {
+			      "Binding": {
+			        "ConceptualEntity": "fLancamentos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_lancamento": {
+			          "Target": {
+			            "Entity": "f_lancamento"
+			          }
+			        },
+			        "medida.KPI_flag_mês": {
+			          "Target": {
+			            "Entity": "medida.KPI_flag_mês"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_lancamento"
+			            },
+			            "Object": {
+			              "Role": "medida.KPI_flag_mês"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_lancamentos_have_KPI_flag_mês"
+			        }
+			      ]
+			    },
+			    "d_plano_conta_has_medida_KPI_flag_mês": {
+			      "Binding": {
+			        "ConceptualEntity": "dPlanoConta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_plano_conta": {
+			          "Target": {
+			            "Entity": "d_plano_conta"
+			          }
+			        },
+			        "medida.KPI_flag_mês": {
+			          "Target": {
+			            "Entity": "medida.KPI_flag_mês"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_plano_conta"
+			            },
+			            "Object": {
+			              "Role": "medida.KPI_flag_mês"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_plano_contas_have_KPI_flag_mês"
+			        }
+			      ]
+			    },
+			    "d_estrutura_DRE_has_medida_KPI_flag_mês": {
+			      "Binding": {
+			        "ConceptualEntity": "dEstruturaDRE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_estrutura_DRE": {
+			          "Target": {
+			            "Entity": "d_estrutura_DRE"
+			          }
+			        },
+			        "medida.KPI_flag_mês": {
+			          "Target": {
+			            "Entity": "medida.KPI_flag_mês"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_estrutura_DRE"
+			            },
+			            "Object": {
+			              "Role": "medida.KPI_flag_mês"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_estrutura_DREs_have_KPI_flag_mês"
+			        }
+			      ]
+			    },
+			    "aux_meta_has_medida_KPI_flag_mês": {
+			      "Binding": {
+			        "ConceptualEntity": "auxMeta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aux_meta": {
+			          "Target": {
+			            "Entity": "aux_meta"
+			          }
+			        },
+			        "medida.KPI_flag_mês": {
+			          "Target": {
+			            "Entity": "medida.KPI_flag_mês"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aux_meta"
+			            },
+			            "Object": {
+			              "Role": "medida.KPI_flag_mês"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aux_meta_have_KPI_flag_mês"
 			        }
 			      ]
 			    },
@@ -6721,6 +6716,811 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "ids_are_names_IDs_of_d_estrutura_DREs"
+			        }
+			      ]
+			    },
+			    "f_previsao_has_medida_KPI_flag": {
+			      "Binding": {
+			        "ConceptualEntity": "fPrevisao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_previsao": {
+			          "Target": {
+			            "Entity": "f_previsao"
+			          }
+			        },
+			        "medida.KPI_flag": {
+			          "Target": {
+			            "Entity": "medida.KPI_flag"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_previsao"
+			            },
+			            "Object": {
+			              "Role": "medida.KPI_flag"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_previsaos_have_KPI_flag"
+			        }
+			      ]
+			    },
+			    "d_plano_conta_has_d_estrutura_DRE": {
+			      "Binding": {
+			        "ConceptualEntity": "dPlanoConta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_plano_conta": {
+			          "Target": {
+			            "Entity": "d_plano_conta"
+			          }
+			        },
+			        "d_estrutura_DRE": {
+			          "Target": {
+			            "Entity": "d_estrutura_DRE"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_plano_conta"
+			            },
+			            "Object": {
+			              "Role": "d_estrutura_DRE"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_plano_contas_have_d_estrutura_DREs"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_estrutura_DRE"
+			            },
+			            "Object": {
+			              "Role": "d_plano_conta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_estrutura_DREs_have_d_plano_contas"
+			        }
+			      ]
+			    },
+			    "f_orcamento_has_d_calendario": {
+			      "Binding": {
+			        "ConceptualEntity": "fOrcamento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_orcamento": {
+			          "Target": {
+			            "Entity": "f_orcamento"
+			          }
+			        },
+			        "d_calendario": {
+			          "Target": {
+			            "Entity": "d_calendario"
+			          },
+			          "Nouns": [
+			            {
+			              "competencia data": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_orcamento"
+			            },
+			            "Object": {
+			              "Role": "d_calendario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_orcamentos_have_d_calendarios"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario"
+			            },
+			            "Object": {
+			              "Role": "f_orcamento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_calendarios_have_f_orcamentos"
+			        }
+			      ]
+			    },
+			    "f_orcamento_has_d_plano_conta": {
+			      "Binding": {
+			        "ConceptualEntity": "fOrcamento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_orcamento": {
+			          "Target": {
+			            "Entity": "f_orcamento"
+			          }
+			        },
+			        "d_plano_conta": {
+			          "Target": {
+			            "Entity": "d_plano_conta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_orcamento"
+			            },
+			            "Object": {
+			              "Role": "d_plano_conta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_orcamentos_have_d_plano_contas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_plano_conta"
+			            },
+			            "Object": {
+			              "Role": "f_orcamento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_plano_contas_have_f_orcamentos"
+			        }
+			      ]
+			    },
+			    "f_previsao_has_d_calendario": {
+			      "Binding": {
+			        "ConceptualEntity": "fPrevisao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_previsao": {
+			          "Target": {
+			            "Entity": "f_previsao"
+			          }
+			        },
+			        "d_calendario": {
+			          "Target": {
+			            "Entity": "d_calendario"
+			          },
+			          "Nouns": [
+			            {
+			              "competencia data": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_previsao"
+			            },
+			            "Object": {
+			              "Role": "d_calendario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_previsaos_have_d_calendarios"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario"
+			            },
+			            "Object": {
+			              "Role": "f_previsao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_calendarios_have_f_previsaos"
+			        }
+			      ]
+			    },
+			    "f_previsao_has_d_plano_conta": {
+			      "Binding": {
+			        "ConceptualEntity": "fPrevisao"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_previsao": {
+			          "Target": {
+			            "Entity": "f_previsao"
+			          }
+			        },
+			        "d_plano_conta": {
+			          "Target": {
+			            "Entity": "d_plano_conta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_previsao"
+			            },
+			            "Object": {
+			              "Role": "d_plano_conta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_previsaos_have_d_plano_contas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_plano_conta"
+			            },
+			            "Object": {
+			              "Role": "f_previsao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_plano_contas_have_f_previsaos"
+			        }
+			      ]
+			    },
+			    "f_lancamento_has_d_calendario": {
+			      "Binding": {
+			        "ConceptualEntity": "fLancamentos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_lancamento": {
+			          "Target": {
+			            "Entity": "f_lancamento"
+			          }
+			        },
+			        "d_calendario": {
+			          "Target": {
+			            "Entity": "d_calendario"
+			          },
+			          "Nouns": [
+			            {
+			              "competencia data": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_lancamento"
+			            },
+			            "Object": {
+			              "Role": "d_calendario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_lancamentos_have_d_calendarios"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario"
+			            },
+			            "Object": {
+			              "Role": "f_lancamento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_calendarios_have_f_lancamentos"
+			        }
+			      ]
+			    },
+			    "f_lancamento_has_d_plano_conta": {
+			      "Binding": {
+			        "ConceptualEntity": "fLancamentos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_lancamento": {
+			          "Target": {
+			            "Entity": "f_lancamento"
+			          }
+			        },
+			        "d_plano_conta": {
+			          "Target": {
+			            "Entity": "d_plano_conta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_lancamento"
+			            },
+			            "Object": {
+			              "Role": "d_plano_conta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_lancamentos_have_d_plano_contas"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_plano_conta"
+			            },
+			            "Object": {
+			              "Role": "f_lancamento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_plano_contas_have_f_lancamentos"
+			        }
+			      ]
+			    },
+			    "d_calendario_data_has_hierarquia_de_data": {
+			      "Binding": {
+			        "ConceptualEntity": "dCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_calendario.data": {
+			          "Target": {
+			            "Entity": "d_calendario.data"
+			          }
+			        },
+			        "d_calendario.data.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "d_calendario.data.hierarquia_de_data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario.data"
+			            },
+			            "Object": {
+			              "Role": "d_calendario.data.hierarquia_de_data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "data_have_hierarquia_de_data"
+			        }
+			      ]
+			    },
+			    "d_calendario_data_hierarquia_de_data_has_d_calendario_data_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "dCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_calendario.data.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "d_calendario.data.hierarquia_de_data"
+			          }
+			        },
+			        "d_calendario.data.ano": {
+			          "Target": {
+			            "Entity": "d_calendario.data.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario.data.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "d_calendario.data.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_anos"
+			        }
+			      ]
+			    },
+			    "d_calendario_data_hierarquia_de_data_has_d_calendario_data_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "dCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_calendario.data.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "d_calendario.data.hierarquia_de_data"
+			          }
+			        },
+			        "d_calendario.data.trimestre": {
+			          "Target": {
+			            "Entity": "d_calendario.data.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario.data.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "d_calendario.data.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_trimestres"
+			        }
+			      ]
+			    },
+			    "d_calendario_data_hierarquia_de_data_has_d_calendario_data_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "dCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_calendario.data.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "d_calendario.data.hierarquia_de_data"
+			          }
+			        },
+			        "d_calendario.data.mê": {
+			          "Target": {
+			            "Entity": "d_calendario.data.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario.data.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "d_calendario.data.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_mê"
+			        }
+			      ]
+			    },
+			    "d_calendario_data_hierarquia_de_data_has_d_calendario_data_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "dCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_calendario.data.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "d_calendario.data.hierarquia_de_data"
+			          }
+			        },
+			        "d_calendario.data.dia": {
+			          "Target": {
+			            "Entity": "d_calendario.data.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario.data.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "d_calendario.data.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_dias"
+			        }
+			      ]
+			    },
+			    "d_calendario_data_ano_has_d_calendario_data_trimestre": {
+			      "Binding": {
+			        "ConceptualEntity": "dCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_calendario.data.ano": {
+			          "Target": {
+			            "Entity": "d_calendario.data.ano"
+			          }
+			        },
+			        "d_calendario.data.trimestre": {
+			          "Target": {
+			            "Entity": "d_calendario.data.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario.data.ano"
+			            },
+			            "Object": {
+			              "Role": "d_calendario.data.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "anos_have_trimestres"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario.data.trimestre"
+			            },
+			            "Object": {
+			              "Role": "d_calendario.data.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_anos"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "d_calendario.data.trimestre"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "d_calendario.data.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_are_in_anos"
+			        }
+			      ]
+			    },
+			    "d_calendario_data_trimestre_has_d_calendario_data_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "dCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_calendario.data.trimestre": {
+			          "Target": {
+			            "Entity": "d_calendario.data.trimestre"
+			          }
+			        },
+			        "d_calendario.data.mê": {
+			          "Target": {
+			            "Entity": "d_calendario.data.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario.data.trimestre"
+			            },
+			            "Object": {
+			              "Role": "d_calendario.data.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "trimestres_have_mê"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario.data.mê"
+			            },
+			            "Object": {
+			              "Role": "d_calendario.data.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_trimestres"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "d_calendario.data.mê"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "d_calendario.data.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_are_in_trimestres"
+			        }
+			      ]
+			    },
+			    "d_calendario_data_mê_has_d_calendario_data_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "dCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_calendario.data.mê": {
+			          "Target": {
+			            "Entity": "d_calendario.data.mê"
+			          }
+			        },
+			        "d_calendario.data.dia": {
+			          "Target": {
+			            "Entity": "d_calendario.data.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario.data.mê"
+			            },
+			            "Object": {
+			              "Role": "d_calendario.data.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mê_have_dias"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario.data.dia"
+			            },
+			            "Object": {
+			              "Role": "d_calendario.data.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_have_mê"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "d_calendario.data.dia"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "d_calendario.data.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dias_are_in_mê"
+			        }
+			      ]
+			    },
+			    "d_calendario_inicio_me_has_hierarquia_de_data": {
+			      "Binding": {
+			        "ConceptualEntity": "dCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_calendario.inicio_me": {
+			          "Target": {
+			            "Entity": "d_calendario.inicio_me"
+			          }
+			        },
+			        "d_calendario.inicio_me.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "d_calendario.inicio_me.hierarquia_de_data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario.inicio_me"
+			            },
+			            "Object": {
+			              "Role": "d_calendario.inicio_me.hierarquia_de_data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "inicio_me_have_hierarquia_de_data"
+			        }
+			      ]
+			    },
+			    "d_calendario_inicio_me_hierarquia_de_data_has_d_calendario_inicio_me_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "dCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_calendario.inicio_me.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "d_calendario.inicio_me.hierarquia_de_data"
+			          }
+			        },
+			        "d_calendario.inicio_me.ano": {
+			          "Target": {
+			            "Entity": "d_calendario.inicio_me.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario.inicio_me.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "d_calendario.inicio_me.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_anos1"
 			        }
 			      ]
 			    },

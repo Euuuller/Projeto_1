@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "fa1a7cf16c16d3200cca",
   "position": {
-    "x": 89.408050513022886,
-    "y": 495.53275453827939,
+    "x": 87.537993920972639,
+    "y": 453.73860182370822,
     "z": 0,
-    "height": 460,
-    "width": 1060
+    "height": 533.98176291793311,
+    "width": 1082.5531914893618
   },
   "visual": {
     "visualType": "pivotTable",
@@ -75,7 +75,8 @@
                 }
               },
               "queryRef": "Medidas.KPI Flag",
-              "nativeQueryRef": "KPI Flag"
+              "nativeQueryRef": "KPI",
+              "displayName": "KPI"
             },
             {
               "field": {
@@ -174,26 +175,13 @@
         "sort": [
           {
             "field": {
-              "Column": {
+              "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "dEstruturaDRE"
+                    "Entity": "Medidas"
                   }
                 },
-                "Property": "contaGerencial"
-              }
-            },
-            "direction": "Ascending"
-          },
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "dPlanoConta"
-                  }
-                },
-                "Property": "descricaoN1"
+                "Property": "KPI Flag"
               }
             },
             "direction": "Ascending"
@@ -731,6 +719,7 @@
       },
       {
         "name": "ed66c222e0f0b4afa832",
+        "displayName": "KPI",
         "field": {
           "Measure": {
             "Expression": {
