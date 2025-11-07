@@ -308,6 +308,36 @@ table Medidas
 		displayFolder: Storytelling
 		lineageTag: 04ed02bc-4755-4306-9c7f-60b0079138c5
 
+	measure '% Meta vs Realizado Receita Bruta' =
+			
+			CALCULATE(
+			    [% Meta vs Realizado],
+			    dEstruturaDRE[index] = 1
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: DRE
+		lineageTag: b9d61870-10a1-41bd-94e2-b3e49d364869
+
+	measure '% Meta vs Realizado Margem de Contribuição' =
+			
+			CALCULATE(
+			    [% Meta vs Realizado],
+			    dEstruturaDRE[index] = 5
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: DRE
+		lineageTag: 72082efa-72fc-41eb-8151-b1cdeb5e3424
+
+	measure '% Meta vs Realizado Despesas' =
+			
+			CALCULATE(
+			    [% Meta vs Realizado],
+			    dEstruturaDRE[index] = 6
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: DRE
+		lineageTag: 79994dfd-2ade-4b69-847b-af9ae835b9ad
+
 	column 'Coluna 1'
 		dataType: string
 		isHidden
