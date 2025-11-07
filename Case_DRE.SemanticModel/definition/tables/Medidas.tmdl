@@ -8,6 +8,7 @@ table Medidas
 			    fLancamentos[valor] * RELATED(dPlanoConta[tipoLancamento])
 			)
 		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		displayFolder: Total
 		lineageTag: 0421cd52-03d2-4f61-8ccd-b455526ec22b
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
@@ -35,6 +36,7 @@ table Medidas
 			    BLANK()
 			)
 		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		displayFolder: DRE
 		lineageTag: fbeb9bbc-008e-4b91-b1ee-fab8f4537e6d
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
@@ -46,6 +48,7 @@ table Medidas
 			    fOrcamento[valor] * RELATED(dPlanoConta[tipoLancamento])
 			)
 		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		displayFolder: Total
 		lineageTag: decff684-2827-4c42-a8f9-b3915367ae67
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
@@ -57,6 +60,7 @@ table Medidas
 			    fPrevisao[valor] * RELATED(dPlanoConta[tipoLancamento])
 			)
 		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		displayFolder: Total
 		lineageTag: fa2ca25d-27b4-45b5-979e-e04194d1ea67
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
@@ -84,6 +88,7 @@ table Medidas
 			    BLANK()
 			)
 		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		displayFolder: DRE
 		lineageTag: baec2451-91b9-4d3a-bc58-70eb9d8e51bb
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
@@ -111,6 +116,7 @@ table Medidas
 			    BLANK()
 			)
 		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		displayFolder: DRE
 		lineageTag: cee615df-2a41-4b6f-ba9a-170e16fd6eff
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
@@ -123,6 +129,7 @@ table Medidas
 			    [$ Previsto]
 			)
 		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		displayFolder: DRE
 		lineageTag: c63d9d35-9e80-436b-b6dd-19cb28c9794d
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
@@ -138,6 +145,7 @@ table Medidas
 			    ABS(vMeta)
 			)
 		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: DRE
 		lineageTag: d9c65fca-f52b-4286-b504-512b35185dd3
 
 	measure '$ Realizado YTD' =
@@ -147,6 +155,7 @@ table Medidas
 			    DATESYTD(dCalendario[Data])
 			)
 		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		displayFolder: DRE
 		lineageTag: 421f0782-ab4d-4db0-82d0-eee1b053b939
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
@@ -158,6 +167,7 @@ table Medidas
 			    DATESYTD(dCalendario[Data])
 			)
 		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		displayFolder: DRE
 		lineageTag: 893221a6-75a5-42c0-bc17-0b6358d64b1b
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
@@ -173,14 +183,17 @@ table Medidas
 			    ABS(vMeta)
 			)
 		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: DRE
 		lineageTag: ebcca698-3b95-4c1e-8dff-ea99deda7305
 
 	measure 'KPI Flag Mês' = IF([% Meta vs Realizado] < 0, 1, 0)
 		formatString: 0
+		displayFolder: Storytelling
 		lineageTag: 5a6e337b-30e0-4189-ac18-1c268e280597
 
 	measure 'KPI Flag YTD' = IF([% Meta vs Realizado YTD] < 0, 1, 0)
 		formatString: 0
+		displayFolder: Storytelling
 		lineageTag: 507d78f3-c75c-4d40-8878-f5b6f508c292
 
 	measure 'KPI Flag' =
@@ -189,6 +202,7 @@ table Medidas
 			    [KPI Flag Mês] = 1 && [KPI Flag YTD] = 1,
 			    "🚩"
 			)
+		displayFolder: Storytelling
 		lineageTag: df1a1cbc-bfc6-4c52-aecb-df66c18b865c
 
 	measure '$ Realizado Receita bruta' = ```
@@ -199,6 +213,7 @@ table Medidas
 			 )
 			```
 		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		displayFolder: DRE
 		lineageTag: 10f598fe-0663-4424-bc2a-f0e43b100ea3
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
@@ -211,6 +226,7 @@ table Medidas
 			 )
 			```
 		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		displayFolder: DRE
 		lineageTag: c2e4d222-db50-4c3e-a962-c0091c78bdcf
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
@@ -220,9 +236,10 @@ table Medidas
 			 CALCULATE(
 			    [$ Realizado],
 			    dEstruturaDRE[index] = 6
-			 )
+			 ) * -1
 			```
 		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		displayFolder: DRE
 		lineageTag: e3484f9d-6669-46d9-a0ce-72e6880d3975
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
@@ -234,6 +251,7 @@ table Medidas
 			    [$ Realizado Receita Bruta Fixa]
 			)
 		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: DRE
 		lineageTag: b34de1bd-cabc-4a03-9871-75f916bd9cde
 
 	measure '$ Realizado Receita Bruta Fixa' =
@@ -243,6 +261,7 @@ table Medidas
 			    ALLSELECTED(dPlanoConta)
 			)
 		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		displayFolder: DRE
 		lineageTag: 47816467-bd4b-4438-b46b-8015611cad52
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
@@ -253,9 +272,9 @@ table Medidas
 			    [$ Realizado Despesas],
 			    [$ Realizado Receita Bruta Fixa]
 			)
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: DRE
 		lineageTag: 864dc611-4719-4639-9571-65b9ad3169c2
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure '% AV Margem de Contribuição' =
 			
@@ -263,9 +282,31 @@ table Medidas
 			    [$ Realizado Margem de Contribuição],
 			    [$ Realizado Receita Bruta Fixa]
 			)
+		formatString: 0.0%;-0.0%;0.0%
+		displayFolder: DRE
 		lineageTag: 768d344a-705b-4f28-8603-534469a16ebc
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+	measure 'Cartão AV Resultado Líquido' =
+			
+			FORMAT([% AV], "0,0%")
+		displayFolder: Storytelling
+		lineageTag: fd0586e0-63ee-4d8b-bc2b-7caf380e3c38
+
+	measure 'Cartão Receita Bruta Melhor Mês' = ```
+			
+			CALCULATE(
+			    TOPN(
+			        1, 
+			        ALL(dCalendario[MesAno]),
+			        [$ Realizado Receita bruta]
+			    ),
+			    ALL(dCalendario),
+			    VALUES(dCalendario[Ano])
+			)
+			    
+			```
+		displayFolder: Storytelling
+		lineageTag: 04ed02bc-4755-4306-9c7f-60b0079138c5
 
 	column 'Coluna 1'
 		dataType: string
