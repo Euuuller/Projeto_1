@@ -338,6 +338,55 @@ table Medidas
 		displayFolder: DRE
 		lineageTag: 79994dfd-2ade-4b69-847b-af9ae835b9ad
 
+	measure 'Cartão Meta vs Realizado' =
+			
+			FORMAT(
+			    [% Meta vs Realizado],
+			    "+0.0% 🟢; -0.0% 🔴"
+			)
+		displayFolder: Storytelling
+		lineageTag: 10775e35-4df2-41b1-90b0-c5fd8f0f26d0
+
+	measure 'Cartão Meta vs Despesas Operacionais' =
+			
+			FORMAT(
+			    [% Meta vs Realizado Despesas],
+			    "+0.0% 🟢; -0.0% 🔴"
+			)
+		displayFolder: Storytelling
+		lineageTag: 4b411926-4b36-4e36-a4e6-a549a39b376e
+
+	measure 'Cartão Meta vs Margem de Contribuição' =
+			
+			FORMAT(
+			    [% Meta vs Realizado Margem de Contribuição],
+			    "+0.0% 🟢; -0.0% 🔴"
+			)
+		displayFolder: Storytelling
+		lineageTag: 02f645eb-7d82-4aea-80d6-460437be3a4d
+
+	measure 'Título Rótulo Meta' = ```
+			
+			"🎯" & 
+			VALUES(auxMeta[auxMeta]) & 
+			":"
+			```
+		displayFolder: Storytelling
+		lineageTag: 6ba11b6b-bc2a-4f14-ab6b-df0c871c4222
+
+	measure 'Cartão Meta vs Receita Bruta' =
+			
+			FORMAT(
+			    [% Meta vs Realizado Receita Bruta],
+			    "+0.0% 🟢; -0.0% 🔴"
+			)
+		displayFolder: Storytelling
+		lineageTag: ef680496-9005-427c-95b7-481b72c0ebc3
+
+	measure 'Cartão Meta Valor' = FORMAT([$ Meta], "R$ 0,0")
+		displayFolder: Storytelling
+		lineageTag: f387b9c4-1acb-4466-add3-e6cadb2b6e0d
+
 	column 'Coluna 1'
 		dataType: string
 		isHidden

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "fa1a7cf16c16d3200cca",
   "position": {
-    "x": 87.537993920972639,
-    "y": 453.73860182370822,
+    "x": 85.819456617002629,
+    "y": 450.97283085013146,
     "z": 0,
-    "height": 533.98176291793311,
-    "width": 1082.5531914893618,
+    "height": 540.15775635407545,
+    "width": 1075.2673093777389,
     "tabOrder": 4000
   },
   "visual": {
@@ -197,13 +197,26 @@
         "sort": [
           {
             "field": {
-              "Measure": {
+              "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "Medidas"
+                    "Entity": "dEstruturaDRE"
                   }
                 },
-                "Property": "KPI Flag"
+                "Property": "contaGerencial"
+              }
+            },
+            "direction": "Ascending"
+          },
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "dPlanoConta"
+                  }
+                },
+                "Property": "descricaoN1"
               }
             },
             "direction": "Ascending"
