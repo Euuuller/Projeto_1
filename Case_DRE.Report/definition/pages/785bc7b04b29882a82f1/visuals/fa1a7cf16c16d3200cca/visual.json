@@ -6,12 +6,33 @@
     "y": 453.73860182370822,
     "z": 0,
     "height": 533.98176291793311,
-    "width": 1082.5531914893618
+    "width": 1082.5531914893618,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "pivotTable",
     "query": {
       "queryState": {
+        "Columns": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dCalendario"
+                    }
+                  },
+                  "Property": "NomeMes"
+                }
+              },
+              "queryRef": "dCalendario.NomeMes",
+              "nativeQueryRef": " 1",
+              "active": true,
+              "displayName": " "
+            }
+          ]
+        },
         "Rows": {
           "projections": [
             {
@@ -26,8 +47,9 @@
                 }
               },
               "queryRef": "dEstruturaDRE.contaGerencial",
-              "nativeQueryRef": "contaGerencial",
-              "active": true
+              "nativeQueryRef": " ",
+              "active": true,
+              "displayName": " "
             },
             {
               "field": {
@@ -251,7 +273,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "14D"
+                  "Value": "12D"
                 }
               }
             },
@@ -262,46 +284,10 @@
                 }
               }
             },
-            "fontColorPrimary": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
             "wordWrap": {
               "expr": {
                 "Literal": {
                   "Value": "true"
-                }
-              }
-            },
-            "backColorPrimary": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "backColorSecondary": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.1
-                    }
-                  }
                 }
               }
             }
@@ -541,6 +527,39 @@
                   }
                 }
               }
+            },
+            "gridHorizontalWeight": {
+              "expr": {
+                "Literal": {
+                  "Value": "3D"
+                }
+              }
+            },
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "gridVerticalColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "gridVerticalWeight": {
+              "expr": {
+                "Literal": {
+                  "Value": "3D"
+                }
+              }
             }
           }
         }
@@ -552,6 +571,214 @@
               "expr": {
                 "Literal": {
                   "Value": "14D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 4,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "titleAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Center'"
+                }
+              }
+            },
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "autoSizeColumnWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTotals": [
+        {
+          "properties": {
+            "columnSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "rowSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "perRowLevel": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "levelSubtotalEnabled": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "dEstruturaDRE.contaGerencial"
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "layout": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Compact'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {},
+          "selector": {
+            "metadata": "Medidas.KPI Flag"
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "metadata": "Medidas.$ Realizado"
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "metadata": "Medidas.$ Meta"
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "metadata": "Medidas.% Meta vs Realizado"
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "metadata": "Medidas.$ Realizado YTD"
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "metadata": "Medidas.$ Meta YTD"
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "metadata": "Medidas.% Meta vs Realizado YTD"
+          }
+        },
+        {
+          "properties": {},
+          "selector": {
+            "metadata": "dEstruturaDRE.contaGerencial"
+          }
+        }
+      ],
+      "rowHeaders": [
+        {
+          "properties": {
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Left'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowTotal": [
+        {
+          "properties": {
+            "applyToHeaders": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -585,138 +812,25 @@
             }
           }
         }
+      ],
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'None'"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
-      {
-        "name": "c3303a785fc53fe5fc83",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dEstruturaDRE"
-              }
-            },
-            "Property": "contaGerencial"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "1e541c95a6933e0f2087",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "$ Realizado"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "5187cc2fe7e434f395ce",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dPlanoConta"
-              }
-            },
-            "Property": "descricaoN1"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "20a865f5b128c654286d",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dPlanoConta"
-              }
-            },
-            "Property": "descricaoN2"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "a27f2176e2cf9d3b3a80",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "$ Meta"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "07bce231364703e41386",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "% Meta vs Realizado"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "5e0bf1d6699041ef6270",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "$ Realizado YTD"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "a2118e7449bf5f900095",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "% Meta vs Realizado YTD"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "60e50eab768784601b6b",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "$ Meta YTD"
-          }
-        },
-        "type": "Advanced"
-      },
       {
         "name": "ed66c222e0f0b4afa832",
         "displayName": "KPI",
@@ -731,6 +845,146 @@
           }
         },
         "type": "Advanced"
+      },
+      {
+        "name": "4c755b798444c93333c7",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dEstruturaDRE"
+              }
+            },
+            "Property": "contaGerencial"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "749a3d2fb5d18a69c5a1",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dPlanoConta"
+              }
+            },
+            "Property": "descricaoN1"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "747ba902e4af4874221f",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dPlanoConta"
+              }
+            },
+            "Property": "descricaoN2"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "2f98f474091cbe739903",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "$ Realizado"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8cdf7f2e0a3db5e258a0",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "$ Meta"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3eb1574cca9aeb9d5cba",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "% Meta vs Realizado"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "46c258436d431d219ad7",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "$ Realizado YTD"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "b27925bda52f795d6bfd",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "$ Meta YTD"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "270e553b7db72fbc1817",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "% Meta vs Realizado YTD"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "62aa2bbd578f4728e097",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dCalendario"
+              }
+            },
+            "Property": "NomeMes"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

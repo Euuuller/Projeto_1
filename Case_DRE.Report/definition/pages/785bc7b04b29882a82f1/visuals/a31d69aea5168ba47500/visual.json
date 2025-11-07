@@ -4,10 +4,9 @@
   "position": {
     "x": 1502.7355623100304,
     "y": 124.01215805471125,
-    "z": 3,
+    "z": 3000,
     "height": 100.66869300911854,
-    "width": 179.45288753799392,
-    "tabOrder": 1
+    "width": 179.45288753799392
   },
   "visual": {
     "visualType": "slicer",
@@ -307,23 +306,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "9c747f1c9e6a54f4ab98",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dEstruturaDRE"
-              }
-            },
-            "Property": "empresa"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

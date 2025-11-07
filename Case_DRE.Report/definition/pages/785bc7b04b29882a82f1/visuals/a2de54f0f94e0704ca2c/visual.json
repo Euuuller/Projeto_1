@@ -4,10 +4,10 @@
   "position": {
     "x": 1682.1884498480242,
     "y": 124.01215805471125,
-    "z": 4,
+    "z": 4000,
     "height": 100.66869300911854,
     "width": 180,
-    "tabOrder": 2
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "slicer",
@@ -259,23 +259,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "83b5732e51641d5c04f7",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "auxMeta"
-              }
-            },
-            "Property": "auxMeta"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }
