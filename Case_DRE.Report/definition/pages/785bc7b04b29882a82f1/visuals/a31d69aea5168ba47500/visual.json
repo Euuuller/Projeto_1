@@ -106,7 +106,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'Rio de Janeiro'"
+                                "Value": "'São Paulo'"
                               }
                             }
                           ]
@@ -306,5 +306,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "cca7bebe1f51c84caf8b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dEstruturaDRE"
+              }
+            },
+            "Property": "empresa"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

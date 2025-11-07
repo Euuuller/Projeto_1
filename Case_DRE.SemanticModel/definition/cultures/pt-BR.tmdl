@@ -2856,6 +2856,16 @@ cultureInfo pt-BR
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "Resultado Líquido": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -3518,6 +3528,114 @@ cultureInfo pt-BR
 			        },
 			        {
 			          "KPI": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.realizado_receita_bruta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "$ Realizado Receita bruta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "$ realizado receita bruta": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dollar realizado receita bruta": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "Receita Bruta": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.realizado_margem_de_contribuição": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "$ Realizado Margem de Contribuição"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "$ realizado margem de contribuição": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dollar realizado margem de contribuição": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.624
+			          }
+			        },
+			        {
+			          "Margem de Contribuição": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.realizado_despesas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "$ Realizado Despesas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "$ realizado despesas": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dollar realizado despesa": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "Despesas Operacionais": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -4299,6 +4417,303 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "d_estrutura_DREs_have_d_plano_contas"
+			        }
+			      ]
+			    },
+			    "f_lancamento_has_medida_realizado_despesas": {
+			      "Binding": {
+			        "ConceptualEntity": "fLancamentos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_lancamento": {
+			          "Target": {
+			            "Entity": "f_lancamento"
+			          }
+			        },
+			        "medida.realizado_despesas": {
+			          "Target": {
+			            "Entity": "medida.realizado_despesas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_lancamento"
+			            },
+			            "Object": {
+			              "Role": "medida.realizado_despesas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_lancamentos_have__realizado_despesas"
+			        }
+			      ]
+			    },
+			    "d_plano_conta_has_medida_realizado_despesas": {
+			      "Binding": {
+			        "ConceptualEntity": "dPlanoConta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_plano_conta": {
+			          "Target": {
+			            "Entity": "d_plano_conta"
+			          }
+			        },
+			        "medida.realizado_despesas": {
+			          "Target": {
+			            "Entity": "medida.realizado_despesas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_plano_conta"
+			            },
+			            "Object": {
+			              "Role": "medida.realizado_despesas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_plano_contas_have__realizado_despesas"
+			        }
+			      ]
+			    },
+			    "d_estrutura_DRE_has_medida_realizado_despesas": {
+			      "Binding": {
+			        "ConceptualEntity": "dEstruturaDRE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_estrutura_DRE": {
+			          "Target": {
+			            "Entity": "d_estrutura_DRE"
+			          }
+			        },
+			        "medida.realizado_despesas": {
+			          "Target": {
+			            "Entity": "medida.realizado_despesas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_estrutura_DRE"
+			            },
+			            "Object": {
+			              "Role": "medida.realizado_despesas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_estrutura_DREs_have__realizado_despesas"
+			        }
+			      ]
+			    },
+			    "f_lancamento_has_medida_realizado_margem_de_contribuição": {
+			      "Binding": {
+			        "ConceptualEntity": "fLancamentos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_lancamento": {
+			          "Target": {
+			            "Entity": "f_lancamento"
+			          }
+			        },
+			        "medida.realizado_margem_de_contribuição": {
+			          "Target": {
+			            "Entity": "medida.realizado_margem_de_contribuição"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_lancamento"
+			            },
+			            "Object": {
+			              "Role": "medida.realizado_margem_de_contribuição"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_lancamentos_have__realizado_margem_de_contribuição"
+			        }
+			      ]
+			    },
+			    "d_plano_conta_has_medida_realizado_margem_de_contribuição": {
+			      "Binding": {
+			        "ConceptualEntity": "dPlanoConta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_plano_conta": {
+			          "Target": {
+			            "Entity": "d_plano_conta"
+			          }
+			        },
+			        "medida.realizado_margem_de_contribuição": {
+			          "Target": {
+			            "Entity": "medida.realizado_margem_de_contribuição"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_plano_conta"
+			            },
+			            "Object": {
+			              "Role": "medida.realizado_margem_de_contribuição"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_plano_contas_have__realizado_margem_de_contribuição"
+			        }
+			      ]
+			    },
+			    "d_estrutura_DRE_has_medida_realizado_margem_de_contribuição": {
+			      "Binding": {
+			        "ConceptualEntity": "dEstruturaDRE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_estrutura_DRE": {
+			          "Target": {
+			            "Entity": "d_estrutura_DRE"
+			          }
+			        },
+			        "medida.realizado_margem_de_contribuição": {
+			          "Target": {
+			            "Entity": "medida.realizado_margem_de_contribuição"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_estrutura_DRE"
+			            },
+			            "Object": {
+			              "Role": "medida.realizado_margem_de_contribuição"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_estrutura_DREs_have__realizado_margem_de_contribuição"
+			        }
+			      ]
+			    },
+			    "f_lancamento_has_medida_realizado_receita_bruta": {
+			      "Binding": {
+			        "ConceptualEntity": "fLancamentos"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_lancamento": {
+			          "Target": {
+			            "Entity": "f_lancamento"
+			          }
+			        },
+			        "medida.realizado_receita_bruta": {
+			          "Target": {
+			            "Entity": "medida.realizado_receita_bruta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_lancamento"
+			            },
+			            "Object": {
+			              "Role": "medida.realizado_receita_bruta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_lancamentos_have__realizado_receita_bruta"
+			        }
+			      ]
+			    },
+			    "d_plano_conta_has_medida_realizado_receita_bruta": {
+			      "Binding": {
+			        "ConceptualEntity": "dPlanoConta"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_plano_conta": {
+			          "Target": {
+			            "Entity": "d_plano_conta"
+			          }
+			        },
+			        "medida.realizado_receita_bruta": {
+			          "Target": {
+			            "Entity": "medida.realizado_receita_bruta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_plano_conta"
+			            },
+			            "Object": {
+			              "Role": "medida.realizado_receita_bruta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_plano_contas_have__realizado_receita_bruta"
+			        }
+			      ]
+			    },
+			    "d_estrutura_DRE_has_medida_realizado_receita_bruta": {
+			      "Binding": {
+			        "ConceptualEntity": "dEstruturaDRE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_estrutura_DRE": {
+			          "Target": {
+			            "Entity": "d_estrutura_DRE"
+			          }
+			        },
+			        "medida.realizado_receita_bruta": {
+			          "Target": {
+			            "Entity": "medida.realizado_receita_bruta"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_estrutura_DRE"
+			            },
+			            "Object": {
+			              "Role": "medida.realizado_receita_bruta"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_estrutura_DREs_have__realizado_receita_bruta"
 			        }
 			      ]
 			    },

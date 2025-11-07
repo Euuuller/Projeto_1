@@ -1,0 +1,162 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "e1b4b288c7411f2195d8",
+  "position": {
+    "x": 87.537993920972639,
+    "y": 234.89361702127658,
+    "z": 4001,
+    "height": 218.84498480243161,
+    "width": 872.46200607902733,
+    "tabOrder": 4001
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "$ Realizado Receita bruta"
+                }
+              },
+              "queryRef": "Medidas.$ Realizado Receita bruta",
+              "nativeQueryRef": "Receita Bruta",
+              "displayName": "Receita Bruta"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "$ Realizado Margem de Contribuição"
+                }
+              },
+              "queryRef": "Medidas.$ Realizado Margem de Contribuição",
+              "nativeQueryRef": "Margem de Contribuição",
+              "displayName": "Margem de Contribuição"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "$ Realizado Despesas"
+                }
+              },
+              "queryRef": "Medidas.$ Realizado Despesas",
+              "nativeQueryRef": "Despesas Operacionais",
+              "displayName": "Despesas Operacionais"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "$ Realizado"
+                }
+              },
+              "queryRef": "Medidas.$ Realizado",
+              "nativeQueryRef": "Resultado Líquido",
+              "displayName": "Resultado Líquido"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas"
+                  }
+                },
+                "Property": "$ Realizado Receita bruta"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f7073979687e1549470f",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "$ Realizado Despesas"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ca4d586a095589bf883a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "$ Realizado Receita bruta"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "7bb7ab6f71b0e553e4fa",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "$ Realizado Margem de Contribuição"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "f9ff73c82207df325176",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "$ Realizado"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

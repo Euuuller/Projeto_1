@@ -51,6 +51,25 @@
       "general": [
         {
           "properties": {
+            "outlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "outlineWeight": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
             "filter": {
               "filter": {
                 "Version": 2,
@@ -81,7 +100,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'Setembro'"
+                                "Value": "'Maio'"
                               }
                             }
                           ]
@@ -90,25 +109,6 @@
                     }
                   }
                 ]
-              }
-            },
-            "outlineColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "outlineWeight": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
               }
             }
           }
@@ -300,5 +300,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "3d1be5f2416ec64835c9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dCalendario"
+              }
+            },
+            "Property": "MesAtual"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

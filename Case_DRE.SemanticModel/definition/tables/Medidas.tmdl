@@ -191,6 +191,42 @@ table Medidas
 			)
 		lineageTag: df1a1cbc-bfc6-4c52-aecb-df66c18b865c
 
+	measure '$ Realizado Receita bruta' = ```
+			
+			 CALCULATE(
+			    [$ Realizado],
+			    dEstruturaDRE[index] = 1
+			 )
+			```
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		lineageTag: 10f598fe-0663-4424-bc2a-f0e43b100ea3
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure '$ Realizado Margem de Contribuição' = ```
+			
+			 CALCULATE(
+			    [$ Realizado],
+			    dEstruturaDRE[index] = 5
+			 )
+			```
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		lineageTag: c2e4d222-db50-4c3e-a962-c0091c78bdcf
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure '$ Realizado Despesas' = ```
+			
+			 CALCULATE(
+			    [$ Realizado],
+			    dEstruturaDRE[index] = 6
+			 )
+			```
+		formatString: "R$"\ #,0;-"R$"\ #,0;"R$"\ #,0
+		lineageTag: e3484f9d-6669-46d9-a0ce-72e6880d3975
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
 	column 'Coluna 1'
 		dataType: string
 		isHidden
