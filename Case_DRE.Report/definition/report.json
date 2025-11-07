@@ -80,6 +80,26 @@
           "name": "DRE7975212777528385.json",
           "path": "DRE7975212777528385.json",
           "type": "CustomTheme"
+        },
+        {
+          "name": "Receita_bruta554881189264236.png",
+          "path": "Receita_bruta554881189264236.png",
+          "type": "Image"
+        },
+        {
+          "name": "Resultado_operacional5774186598820663.png",
+          "path": "Resultado_operacional5774186598820663.png",
+          "type": "Image"
+        },
+        {
+          "name": "Despesa_operacional027066381463687006.png",
+          "path": "Despesa_operacional027066381463687006.png",
+          "type": "Image"
+        },
+        {
+          "name": "Resultado_l_quido7261392531839482.png",
+          "path": "Resultado_l_quido7261392531839482.png",
+          "type": "Image"
         }
       ]
     }
