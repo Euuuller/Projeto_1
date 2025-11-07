@@ -64,7 +64,7 @@
               },
               "queryRef": "dPlanoConta.descricaoN1",
               "nativeQueryRef": "descricaoN1",
-              "active": true
+              "active": false
             },
             {
               "field": {
@@ -263,20 +263,7 @@
             "isPinned": true
           }
         ],
-        "root": {
-          "children": [
-            {
-              "identityValues": [
-                {
-                  "Literal": {
-                    "Value": "'= MARGEM DE CONTRIBUIÇÃO'"
-                  }
-                }
-              ],
-              "isToggled": true
-            }
-          ]
-        }
+        "root": {}
       }
     ],
     "objects": {

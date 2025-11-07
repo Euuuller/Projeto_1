@@ -227,6 +227,46 @@ table Medidas
 
 		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
 
+	measure '% AV' =
+			
+			DIVIDE(
+			    [$ Realizado],
+			    [$ Realizado Receita Bruta Fixa]
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: b34de1bd-cabc-4a03-9871-75f916bd9cde
+
+	measure '$ Realizado Receita Bruta Fixa' =
+			
+			CALCULATE(
+			    [$ Realizado Receita bruta],
+			    ALLSELECTED(dPlanoConta)
+			)
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		lineageTag: 47816467-bd4b-4438-b46b-8015611cad52
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	measure '% AV Despesas' =
+			
+			DIVIDE(
+			    [$ Realizado Despesas],
+			    [$ Realizado Receita Bruta Fixa]
+			)
+		lineageTag: 864dc611-4719-4639-9571-65b9ad3169c2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% AV Margem de Contribuição' =
+			
+			DIVIDE(
+			    [$ Realizado Margem de Contribuição],
+			    [$ Realizado Receita Bruta Fixa]
+			)
+		lineageTag: 768d344a-705b-4f28-8603-534469a16ebc
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column 'Coluna 1'
 		dataType: string
 		isHidden
